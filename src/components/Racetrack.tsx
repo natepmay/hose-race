@@ -9,7 +9,7 @@ export function Racetrack({
   progress: number;
 }) {
   const markerStates = [];
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 15; i++) {
     markerStates.push(i <= progress - 1);
   }
 

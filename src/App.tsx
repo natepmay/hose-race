@@ -2,7 +2,7 @@ import "./App.css";
 import { Racetrack } from "./components/Racetrack";
 import { useEffect, useState } from "react";
 
-const wordsToRace = ["black", "shop", "open", "sale"];
+const wordsToRace = ["😭", "comic", "missouri", "five"];
 const english = /^en(-[A-Z0-9]{2,3})?$/;
 
 function matchWord(wordToMatch: string, testString: string) {

@@ -46,6 +46,11 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+body {
+  background-image: url("assets/astro-turf-feature-small.jpg");
+  background-repeat: repeat;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
