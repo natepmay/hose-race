@@ -1,0 +1,1286 @@
+[
+  {
+    "word": "piece",
+    "median": 3
+  },
+  {
+    "word": "ones",
+    "median": 4
+  },
+  {
+    "word": "space",
+    "median": 4
+  },
+  {
+    "word": "gave",
+    "median": 4
+  },
+  {
+    "word": "choose",
+    "median": 4
+  },
+  {
+    "word": "isn’t",
+    "median": 4
+  },
+  {
+    "word": "question",
+    "median": 4
+  },
+  {
+    "word": "seems",
+    "median": 4
+  },
+  {
+    "word": "movie",
+    "median": 5
+  },
+  {
+    "word": "during",
+    "median": 5
+  },
+  {
+    "word": "season",
+    "median": 5
+  },
+  {
+    "word": "working",
+    "median": 5
+  },
+  {
+    "word": "sounds",
+    "median": 5
+  },
+  {
+    "word": "able",
+    "median": 5
+  },
+  {
+    "word": "welcome",
+    "median": 5
+  },
+  {
+    "word": "taking",
+    "median": 5
+  },
+  {
+    "word": "weird",
+    "median": 5
+  },
+  {
+    "word": "finally",
+    "median": 5
+  },
+  {
+    "word": "story",
+    "median": 5
+  },
+  {
+    "word": "honestly",
+    "median": 5
+  },
+  {
+    "word": "job",
+    "median": 5
+  },
+  {
+    "word": "link",
+    "median": 5
+  },
+  {
+    "word": "exactly",
+    "median": 5
+  },
+  {
+    "word": "under",
+    "median": 5
+  },
+  {
+    "word": "content",
+    "median": 5
+  },
+  {
+    "word": "came",
+    "median": 5
+  },
+  {
+    "word": "behind",
+    "median": 5
+  },
+  {
+    "word": "especially",
+    "median": 5
+  },
+  {
+    "word": "used",
+    "median": 5
+  },
+  {
+    "word": "video",
+    "median": 6
+  },
+  {
+    "word": "talking",
+    "median": 6
+  },
+  {
+    "word": "he’s",
+    "median": 6
+  },
+  {
+    "word": "literally",
+    "median": 6
+  },
+  {
+    "word": "must",
+    "median": 6
+  },
+  {
+    "word": "open",
+    "median": 6
+  },
+  {
+    "word": "almost",
+    "median": 6
+  },
+  {
+    "word": "feeling",
+    "median": 6
+  },
+  {
+    "word": "okay",
+    "median": 6
+  },
+  {
+    "word": "lost",
+    "median": 6
+  },
+  {
+    "word": "hate",
+    "median": 6
+  },
+  {
+    "word": "less",
+    "median": 6
+  },
+  {
+    "word": "person",
+    "median": 6
+  },
+  {
+    "word": "social",
+    "median": 6
+  },
+  {
+    "word": "past",
+    "median": 6
+  },
+  {
+    "word": "ok",
+    "median": 6
+  },
+  {
+    "word": "called",
+    "median": 6
+  },
+  {
+    "word": "instead",
+    "median": 6
+  },
+  {
+    "word": "gets",
+    "median": 6
+  },
+  {
+    "word": "call",
+    "median": 6
+  },
+  {
+    "word": "may",
+    "median": 7
+  },
+  {
+    "word": "house",
+    "median": 7
+  },
+  {
+    "word": "else",
+    "median": 7
+  },
+  {
+    "word": "you’re",
+    "median": 7
+  },
+  {
+    "word": "god",
+    "median": 7
+  },
+  {
+    "word": "music",
+    "median": 7
+  },
+  {
+    "word": "friend",
+    "median": 7
+  },
+  {
+    "word": "change",
+    "median": 7
+  },
+  {
+    "word": "definitely",
+    "median": 7
+  },
+  {
+    "word": "times",
+    "median": 7
+  },
+  {
+    "word": "free",
+    "median": 7
+  },
+  {
+    "word": "cool",
+    "median": 7
+  },
+  {
+    "word": "care",
+    "median": 7
+  },
+  {
+    "word": "seen",
+    "median": 7
+  },
+  {
+    "word": "check",
+    "median": 7
+  },
+  {
+    "word": "didn’t",
+    "median": 7
+  },
+  {
+    "word": "went",
+    "median": 7
+  },
+  {
+    "word": "twitter",
+    "median": 7
+  },
+  {
+    "word": "looking",
+    "median": 7
+  },
+  {
+    "word": "different",
+    "median": 7
+  },
+  {
+    "word": "absolutely",
+    "median": 7
+  },
+  {
+    "word": "away",
+    "median": 7
+  },
+  {
+    "word": "myself",
+    "median": 8
+  },
+  {
+    "word": "started",
+    "median": 8
+  },
+  {
+    "word": "playing",
+    "median": 8
+  },
+  {
+    "word": "wait",
+    "median": 8
+  },
+  {
+    "word": "true",
+    "median": 8
+  },
+  {
+    "word": "games",
+    "median": 8
+  },
+  {
+    "word": "family",
+    "median": 8
+  },
+  {
+    "word": "ago",
+    "median": 8
+  },
+  {
+    "word": "saw",
+    "median": 8
+  },
+  {
+    "word": "black",
+    "median": 8
+  },
+  {
+    "word": "support",
+    "median": 8
+  },
+  {
+    "word": "list",
+    "median": 8
+  },
+  {
+    "word": "believe",
+    "median": 8
+  },
+  {
+    "word": "try",
+    "median": 8
+  },
+  {
+    "word": "tell",
+    "median": 8
+  },
+  {
+    "word": "everything",
+    "median": 8
+  },
+  {
+    "word": "against",
+    "median": 8
+  },
+  {
+    "word": "watch",
+    "median": 9
+  },
+  {
+    "word": "mean",
+    "median": 9
+  },
+  {
+    "word": "having",
+    "median": 9
+  },
+  {
+    "word": "week",
+    "median": 9
+  },
+  {
+    "word": "bit",
+    "median": 9
+  },
+  {
+    "word": "least",
+    "median": 9
+  },
+  {
+    "word": "start",
+    "median": 9
+  },
+  {
+    "word": "already",
+    "median": 9
+  },
+  {
+    "word": "full",
+    "median": 9
+  },
+  {
+    "word": "home",
+    "median": 9
+  },
+  {
+    "word": "i’ve",
+    "median": 10
+  },
+  {
+    "word": "sorry",
+    "median": 10
+  },
+  {
+    "word": "can’t",
+    "median": 10
+  },
+  {
+    "word": "money",
+    "median": 10
+  },
+  {
+    "word": "stuff",
+    "median": 10
+  },
+  {
+    "word": "live",
+    "median": 10
+  },
+  {
+    "word": "said",
+    "median": 10
+  },
+  {
+    "word": "place",
+    "median": 10
+  },
+  {
+    "word": "book",
+    "median": 10
+  },
+  {
+    "word": "probably",
+    "median": 10
+  },
+  {
+    "word": "nothing",
+    "median": 10
+  },
+  {
+    "word": "making",
+    "median": 10
+  },
+  {
+    "word": "media",
+    "median": 10
+  },
+  {
+    "word": "give",
+    "median": 11
+  },
+  {
+    "word": "play",
+    "median": 11
+  },
+  {
+    "word": "through",
+    "median": 11
+  },
+  {
+    "word": "might",
+    "median": 11
+  },
+  {
+    "word": "part",
+    "median": 11
+  },
+  {
+    "word": "gonna",
+    "median": 11
+  },
+  {
+    "word": "makes",
+    "median": 11
+  },
+  {
+    "word": "without",
+    "median": 11
+  },
+  {
+    "word": "getting",
+    "median": 11
+  },
+  {
+    "word": "pretty",
+    "median": 11
+  },
+  {
+    "word": "looks",
+    "median": 11
+  },
+  {
+    "word": "put",
+    "median": 11
+  },
+  {
+    "word": "own",
+    "median": 11
+  },
+  {
+    "word": "both",
+    "median": 11
+  },
+  {
+    "word": "old",
+    "median": 11
+  },
+  {
+    "word": "follow",
+    "median": 11
+  },
+  {
+    "word": "books",
+    "median": 11
+  },
+  {
+    "word": "thought",
+    "median": 12
+  },
+  {
+    "word": "please",
+    "median": 12
+  },
+  {
+    "word": "bluesky",
+    "median": 12
+  },
+  {
+    "word": "until",
+    "median": 12
+  },
+  {
+    "word": "done",
+    "median": 12
+  },
+  {
+    "word": "everyone",
+    "median": 12
+  },
+  {
+    "word": "world",
+    "median": 12
+  },
+  {
+    "word": "though",
+    "median": 12
+  },
+  {
+    "word": "come",
+    "median": 12
+  },
+  {
+    "word": "next",
+    "median": 12
+  },
+  {
+    "word": "nice",
+    "median": 12
+  },
+  {
+    "word": "show",
+    "median": 12
+  },
+  {
+    "word": "life",
+    "median": 13
+  },
+  {
+    "word": "man",
+    "median": 13
+  },
+  {
+    "word": "fun",
+    "median": 13
+  },
+  {
+    "word": "anything",
+    "median": 13
+  },
+  {
+    "word": "maybe",
+    "median": 13
+  },
+  {
+    "word": "does",
+    "median": 13
+  },
+  {
+    "word": "hard",
+    "median": 13
+  },
+  {
+    "word": "real",
+    "median": 13
+  },
+  {
+    "word": "days",
+    "median": 13
+  },
+  {
+    "word": "happy",
+    "median": 13
+  },
+  {
+    "word": "let",
+    "median": 13
+  },
+  {
+    "word": "help",
+    "median": 13
+  },
+  {
+    "word": "while",
+    "median": 14
+  },
+  {
+    "word": "that’s",
+    "median": 14
+  },
+  {
+    "word": "find",
+    "median": 14
+  },
+  {
+    "word": "down",
+    "median": 14
+  },
+  {
+    "word": "again",
+    "median": 14
+  },
+  {
+    "word": "read",
+    "median": 14
+  },
+  {
+    "word": "another",
+    "median": 14
+  },
+  {
+    "word": "someone",
+    "median": 14
+  },
+  {
+    "word": "yeah",
+    "median": 15
+  },
+  {
+    "word": "since",
+    "median": 15
+  },
+  {
+    "word": "big",
+    "median": 15
+  },
+  {
+    "word": "use",
+    "median": 15
+  },
+  {
+    "word": "post",
+    "median": 15
+  },
+  {
+    "word": "few",
+    "median": 15
+  },
+  {
+    "word": "best",
+    "median": 15
+  },
+  {
+    "word": "lot",
+    "median": 15
+  },
+  {
+    "word": "bad",
+    "median": 15
+  },
+  {
+    "word": "two",
+    "median": 15
+  },
+  {
+    "word": "little",
+    "median": 16
+  },
+  {
+    "word": "doing",
+    "median": 16
+  },
+  {
+    "word": "hope",
+    "median": 16
+  },
+  {
+    "word": "today",
+    "median": 17
+  },
+  {
+    "word": "made",
+    "median": 17
+  },
+  {
+    "word": "actually",
+    "median": 17
+  },
+  {
+    "word": "always",
+    "median": 17
+  },
+  {
+    "word": "before",
+    "median": 17
+  },
+  {
+    "word": "keep",
+    "median": 17
+  },
+  {
+    "word": "art",
+    "median": 17
+  },
+  {
+    "word": "those",
+    "median": 17
+  },
+  {
+    "word": "every",
+    "median": 18
+  },
+  {
+    "word": "look",
+    "median": 18
+  },
+  {
+    "word": "take",
+    "median": 18
+  },
+  {
+    "word": "lol",
+    "median": 18
+  },
+  {
+    "word": "thanks",
+    "median": 18
+  },
+  {
+    "word": "same",
+    "median": 18
+  },
+  {
+    "word": "feel",
+    "median": 18
+  },
+  {
+    "word": "most",
+    "median": 18
+  },
+  {
+    "word": "yes",
+    "median": 19
+  },
+  {
+    "word": "sure",
+    "median": 19
+  },
+  {
+    "word": "say",
+    "median": 20
+  },
+  {
+    "word": "many",
+    "median": 20
+  },
+  {
+    "word": "better",
+    "median": 20
+  },
+  {
+    "word": "game",
+    "median": 20
+  },
+  {
+    "word": "year",
+    "median": 20
+  },
+  {
+    "word": "last",
+    "median": 20
+  },
+  {
+    "word": "which",
+    "median": 20
+  },
+  {
+    "word": "great",
+    "median": 21
+  },
+  {
+    "word": "something",
+    "median": 21
+  },
+  {
+    "word": "thing",
+    "median": 21
+  },
+  {
+    "word": "never",
+    "median": 21
+  },
+  {
+    "word": "where",
+    "median": 21
+  },
+  {
+    "word": "after",
+    "median": 21
+  },
+  {
+    "word": "should",
+    "median": 22
+  },
+  {
+    "word": "off",
+    "median": 22
+  },
+  {
+    "word": "work",
+    "median": 22
+  },
+  {
+    "word": "any",
+    "median": 22
+  },
+  {
+    "word": "she",
+    "median": 23
+  },
+  {
+    "word": "first",
+    "median": 23
+  },
+  {
+    "word": "very",
+    "median": 23
+  },
+  {
+    "word": "well",
+    "median": 23
+  },
+  {
+    "word": "thank",
+    "median": 23
+  },
+  {
+    "word": "way",
+    "median": 24
+  },
+  {
+    "word": "than",
+    "median": 24
+  },
+  {
+    "word": "am",
+    "median": 24
+  },
+  {
+    "word": "why",
+    "median": 24
+  },
+  {
+    "word": "oh",
+    "median": 25
+  },
+  {
+    "word": "right",
+    "median": 25
+  },
+  {
+    "word": "these",
+    "median": 25
+  },
+  {
+    "word": "into",
+    "median": 25
+  },
+  {
+    "word": "her",
+    "median": 26
+  },
+  {
+    "word": "other",
+    "median": 26
+  },
+  {
+    "word": "could",
+    "median": 26
+  },
+  {
+    "word": "then",
+    "median": 26
+  },
+  {
+    "word": "don’t",
+    "median": 26
+  },
+  {
+    "word": "even",
+    "median": 27
+  },
+  {
+    "word": "our",
+    "median": 27
+  },
+  {
+    "word": "us",
+    "median": 28
+  },
+  {
+    "word": "over",
+    "median": 28
+  },
+  {
+    "word": "did",
+    "median": 28
+  },
+  {
+    "word": "go",
+    "median": 29
+  },
+  {
+    "word": "make",
+    "median": 30
+  },
+  {
+    "word": "him",
+    "median": 30
+  },
+  {
+    "word": "only",
+    "median": 31
+  },
+  {
+    "word": "back",
+    "median": 31
+  },
+  {
+    "word": "much",
+    "median": 31
+  },
+  {
+    "word": "because",
+    "median": 31
+  },
+  {
+    "word": "new",
+    "median": 31
+  },
+  {
+    "word": "being",
+    "median": 31
+  },
+  {
+    "word": "still",
+    "median": 32
+  },
+  {
+    "word": "going",
+    "median": 33
+  },
+  {
+    "word": "also",
+    "median": 35
+  },
+  {
+    "word": "want",
+    "median": 35
+  },
+  {
+    "word": "need",
+    "median": 36
+  },
+  {
+    "word": "day",
+    "median": 36
+  },
+  {
+    "word": "got",
+    "median": 38
+  },
+  {
+    "word": "i’m",
+    "median": 38
+  },
+  {
+    "word": "really",
+    "median": 38
+  },
+  {
+    "word": "see",
+    "median": 39
+  },
+  {
+    "word": "had",
+    "median": 39
+  },
+  {
+    "word": "too",
+    "median": 40
+  },
+  {
+    "word": "it’s",
+    "median": 40
+  },
+  {
+    "word": "been",
+    "median": 40
+  },
+  {
+    "word": "know",
+    "median": 40
+  },
+  {
+    "word": "who",
+    "median": 41
+  },
+  {
+    "word": "think",
+    "median": 42
+  },
+  {
+    "word": "their",
+    "median": 43
+  },
+  {
+    "word": "here",
+    "median": 44
+  },
+  {
+    "word": "would",
+    "median": 44
+  },
+  {
+    "word": "love",
+    "median": 46
+  },
+  {
+    "word": "has",
+    "median": 46
+  },
+  {
+    "word": "there",
+    "median": 46
+  },
+  {
+    "word": "them",
+    "median": 48
+  },
+  {
+    "word": "some",
+    "median": 49
+  },
+  {
+    "word": "how",
+    "median": 49
+  },
+  {
+    "word": "his",
+    "median": 50
+  },
+  {
+    "word": "an",
+    "median": 51
+  },
+  {
+    "word": "now",
+    "median": 52
+  },
+  {
+    "word": "by",
+    "median": 54
+  },
+  {
+    "word": "when",
+    "median": 54
+  },
+  {
+    "word": "time",
+    "median": 55
+  },
+  {
+    "word": "more",
+    "median": 55
+  },
+  {
+    "word": "people",
+    "median": 57
+  },
+  {
+    "word": "no",
+    "median": 59
+  },
+  {
+    "word": "he",
+    "median": 60
+  },
+  {
+    "word": "up",
+    "median": 60
+  },
+  {
+    "word": "get",
+    "median": 60
+  },
+  {
+    "word": "good",
+    "median": 62
+  },
+  {
+    "word": "from",
+    "median": 62
+  },
+  {
+    "word": "out",
+    "median": 62
+  },
+  {
+    "word": "or",
+    "median": 63
+  },
+  {
+    "word": "can",
+    "median": 64
+  },
+  {
+    "word": "will",
+    "median": 65
+  },
+  {
+    "word": "about",
+    "median": 67
+  },
+  {
+    "word": "your",
+    "median": 71
+  },
+  {
+    "word": "do",
+    "median": 75
+  },
+  {
+    "word": "at",
+    "median": 76
+  },
+  {
+    "word": "one",
+    "median": 76
+  },
+  {
+    "word": "we",
+    "median": 79
+  },
+  {
+    "word": "if",
+    "median": 84
+  },
+  {
+    "word": "what",
+    "median": 86
+  },
+  {
+    "word": "as",
+    "median": 89
+  },
+  {
+    "word": "all",
+    "median": 90
+  },
+  {
+    "word": "they",
+    "median": 98
+  },
+  {
+    "word": "just",
+    "median": 104
+  },
+  {
+    "word": "me",
+    "median": 115
+  },
+  {
+    "word": "are",
+    "median": 116
+  },
+  {
+    "word": "not",
+    "median": 116
+  },
+  {
+    "word": "was",
+    "median": 117
+  },
+  {
+    "word": "like",
+    "median": 117
+  },
+  {
+    "word": "so",
+    "median": 133
+  },
+  {
+    "word": "be",
+    "median": 135
+  },
+  {
+    "word": "have",
+    "median": 136
+  },
+  {
+    "word": "with",
+    "median": 141
+  },
+  {
+    "word": "but",
+    "median": 144
+  },
+  {
+    "word": "on",
+    "median": 174
+  },
+  {
+    "word": "my",
+    "median": 182
+  },
+  {
+    "word": "this",
+    "median": 213
+  },
+  {
+    "word": "that",
+    "median": 239
+  },
+  {
+    "word": "for",
+    "median": 270
+  },
+  {
+    "word": "it",
+    "median": 275
+  },
+  {
+    "word": "in",
+    "median": 277
+  },
+  {
+    "word": "you",
+    "median": 282
+  },
+  {
+    "word": "is",
+    "median": 294
+  },
+  {
+    "word": "of",
+    "median": 369
+  },
+  {
+    "word": "and",
+    "median": 447
+  },
+  {
+    "word": "a",
+    "median": 543
+  },
+  {
+    "word": "i",
+    "median": 564
+  },
+  {
+    "word": "to",
+    "median": 604
+  },
+  {
+    "word": "the",
+    "median": 829
+  }
+]
