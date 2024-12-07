@@ -1,39 +1,165 @@
+body {
+  --maxwidth: 600px;
+  --racetrack-width: 90px;
+  --track-head-height: 3rem;
+  padding: 0;
+  margin: 0;
+}
+
+/* div {
+  border: 1px solid gray;
+} */
+
+.parent {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text,
+.footer-text {
+  display: flex;
+  flex-direction: rows;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  max-width: var(--maxwidth);
+}
+
+.tracks {
+  display: flex;
+  width: 100%;
+}
+
+.all-racetrack-content {
+  width: 100%;
+  height: 100%;
+  max-width: var(--maxwidth);
+  position: relative;
+  display: flex;
+}
+
+.lines {
+  position: absolute;
+  top: var(--track-head-height);
+  width: 100%;
+  height: calc(100% - 15px - var(--track-head-height));
+  border-color: purple;
+}
+
+.full-line {
+  position: absolute;
+  height: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: start;
+}
+
+.full-line.line1 {
+  top: 0%;
+}
+
+.full-line.line2 {
+  top: 25%;
+}
+
+.full-line.line3 {
+  top: 50%;
+}
+
+.full-line.line4 {
+  top: 75%;
+}
+
+.full-line.finish {
+  top: 100%;
+}
+
+.line-label {
+  margin-right: 5px;
+  position: relative;
+  top: -0.5rem;
+  height: 1rem;
+  width: 20px;
+  text-align: end;
+}
+
+.line {
+  background-color: #ccc;
+  border: none;
+  height: 2px;
+  width: 100%;
+}
+
+.racetrack-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 25px;
+}
+
 .racetrack {
+  width: var(--racetrack-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.track-head {
+  width: 100%;
+  height: var(--track-head-height);
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid;
-  width: 100px;
-  padding: 10px;
-  margin: 5px;
-  overflow: hidden;
+  justify-content: space-evenly;
 }
 
-.racetracks {
+.post-card-slot {
+  width: 100%;
+  height: 8rem;
   display: flex;
-  max-width: 800px;
-  flex-direction: row;
   justify-content: center;
 }
 
-.marker {
-  width: 100%;
-  height: 15px;
-  margin: 5px;
+.track-main {
+  height: 100%;
 }
 
-.marker.off {
-  background-color: transparent;
+.post-light {
+  margin-top: 5px;
+  width: var(--racetrack-width);
+  height: 5px;
 }
 
-.marker.on {
-  background-color: blue;
+.post-light.on {
+  background-color: green;
 }
 
-.main {
+.post-card-slot {
   display: flex;
+  flex-direction: column;
+}
+
+.post-card {
+  text-align: center;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.header,
+.footer {
+  height: 80px;
+  border: 1px solid;
   width: 100%;
-  height: 100vh;
-  align-items: center;
+  display: flex;
   justify-content: center;
 }
