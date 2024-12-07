@@ -1,54 +1,7 @@
 import "./App.css";
-import { Racetrack } from "./components/Racetrack";
-import { useEffect, useState } from "react";
-
-const wordsToRace = ["😭", "comic", "missouri", "five"];
-const english = /^en(-[A-Z0-9]{2,3})?$/;
-
-function matchWord(wordToMatch: string, testString: string) {
-  const regex = new RegExp(`\\b${wordToMatch}\\b`, "g");
-  return regex.test(testString.toLowerCase());
-}
-
-let initialWordCount = {} as { [index: string]: number };
-wordsToRace.forEach((word: string) => {
-  initialWordCount = { ...initialWordCount, [word]: 0 };
-});
+import { Racetracks } from "./components/Racetracks";
 
 function App() {
-  const [wordCount, setWordCount] = useState(initialWordCount);
-  useEffect(() => {
-    const firehoseSocket = new WebSocket(
-      "wss://jetstream2.us-west.bsky.network/subscribe"
-    );
-    firehoseSocket.onmessage = (event) => {
-      const data = JSON.parse(event.data);
-      if (
-        data.kind === "commit" &&
-        data.commit?.record?.$type === "app.bsky.feed.post" &&
-        data.commit.record.langs?.some((locale: string) => english.test(locale))
-      ) {
-        const text = data.commit.record.text.toLowerCase() as string;
-        for (const word of wordsToRace) {
-          if (matchWord(word, text)) {
-            console.log(`+++${word.toUpperCase()}\n${text}`);
-            setWordCount({
-              ...wordCount,
-              [word]: wordCount[word] + 1,
-            });
-            console.log("----------------");
-          }
-        }
-      }
-    };
-    return () => firehoseSocket.close();
-  }, [wordCount]);
-
-  const racetracks = wordsToRace.map((word, index) => {
-    return (
-      <Racetrack name={word} progress={wordCount[word]} key={index}></Racetrack>
-    );
-  });
   return (
     <div className="parent">
       <div className="header">
@@ -80,41 +33,9 @@ function App() {
             <div className="line"></div>
           </div>
         </div>
+        {/* Do I need the "tracks" wrapper? */}
         <div className="tracks">
-          <div className="racetrack-container">
-            <div className="racetrack">
-              <div className="track-head">
-                <div className="track-word">word1</div>
-                <div className="track-score">34</div>
-              </div>
-              <div className="track-main"></div>
-              <div className="post-light on"></div>
-            </div>
-            <div className="racetrack">
-              <div className="track-head">
-                <div className="track-word">word2</div>
-                <div className="track-score">34</div>
-              </div>
-              <div className="track-main"></div>
-              <div className="post-light on"></div>
-            </div>
-            <div className="racetrack">
-              <div className="track-head">
-                <div className="track-word">word3</div>
-                <div className="track-score">34</div>
-              </div>
-              <div className="track-main"></div>
-              <div className="post-light on"></div>
-            </div>
-            <div className="racetrack">
-              <div className="track-head">
-                <div className="track-word">word4</div>
-                <div className="track-score">34</div>
-              </div>
-              <div className="track-main"></div>
-              <div className="post-light on"></div>
-            </div>
-          </div>
+          <Racetracks></Racetracks>
         </div>
       </div>
       <div className="post-card-slot">

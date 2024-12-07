@@ -20,11 +20,12 @@ export function Racetrack({
 
   return (
     <div className="racetrack">
-      {name}
-      <img
-        src="./src/assets/hose.png"
-        style={{ position: "relative", width: "5px", top: topY, left: 0 }}
-      ></img>
+      <div className="track-head">
+        <div className="track-word">{name}</div>
+        <div className="track-score">{progress}</div>
+      </div>
+      <div className="track-main"></div>
+      <div className="post-light on"></div>
     </div>
   );
 }
