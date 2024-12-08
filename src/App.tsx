@@ -2,7 +2,8 @@ import "./App.css";
 import { Racetracks } from "./components/Racetracks";
 import { useFirehose } from "./hooks/useFirehose";
 
-const wordsToRace = ["😭", "comic", "missouri", "five"];
+const wordsToRace = ["crazy", "comic", "missouri", "five"];
+const finishLine = 15;
 
 function App() {
   const { postText, wordCount } = useFirehose(wordsToRace);
@@ -39,13 +40,15 @@ function App() {
         </div>
         {/* Do I need the "tracks" wrapper? */}
         <div className="tracks">
-          <Racetracks wordCount={wordCount} postText={postText}></Racetracks>
+          <Racetracks
+            wordCount={wordCount}
+            postText={postText}
+            finishLine={finishLine}
+          ></Racetracks>
         </div>
       </div>
       <div className="post-card-slot">
-        <div className="post-card">
-          And that's when I turned to him and I was like what did u say word1?
-        </div>
+        <div className="post-card">{postText.text}</div>
       </div>
       <div className="footer">
         <div className="footer-text">

@@ -1,14 +1,16 @@
 import "../App.css";
-// import { Marker } from "./Marker";
+import { Hose } from "./Hose";
 
 export function Racetrack({
   name,
   progress,
   postLightState,
+  finishLine,
 }: {
   name: string;
   progress: number;
   postLightState: boolean;
+  finishLine: number;
 }) {
   return (
     <div className="racetrack">
@@ -16,7 +18,7 @@ export function Racetrack({
         <div className="track-word">{name}</div>
         <div className="track-score">{progress}</div>
       </div>
-      <div className="track-main"></div>
+      <Hose progress={progress} finishLine={finishLine}></Hose>
       <div className={`post-light ${postLightState ? "on" : ""}`}></div>
     </div>
   );

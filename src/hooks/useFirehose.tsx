@@ -30,9 +30,9 @@ export function useFirehose(wordsToRace: string[]) {
         data.commit?.record?.$type === "app.bsky.feed.post" &&
         data.commit.record.langs?.some((locale: string) => english.test(locale))
       ) {
-        const text = data.commit.record.text.toLowerCase() as string;
+        const text = data.commit.record.text as string;
         for (const word of wordsToRace) {
-          if (matchWord(word, text)) {
+          if (matchWord(word, text.toLowerCase())) {
             console.log(`+++${word.toUpperCase()}\n${text}`);
             setPostText({ word: word, text: text });
             setWordCount({

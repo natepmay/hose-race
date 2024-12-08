@@ -13,9 +13,11 @@ function setInitialPostLightStates(words: string[]) {
 export function Racetracks({
   wordCount,
   postText,
+  finishLine,
 }: {
   wordCount: WordCount;
   postText: PostText;
+  finishLine: number;
 }) {
   const [postLightStates, setPostLightStates] = useState(
     setInitialPostLightStates(Object.keys(wordCount))
@@ -39,6 +41,7 @@ export function Racetracks({
         name={word}
         progress={wordCount[word]}
         postLightState={postLightStates[word]}
+        finishLine={finishLine}
         key={index}
       ></Racetrack>
     );
