@@ -4,20 +4,12 @@ import "../App.css";
 export function Racetrack({
   name,
   progress,
+  postText,
 }: {
   name: string;
   progress: number;
+  postText: string;
 }) {
-  // const markerStates = [];
-  // for (let i = 0; i < 15; i++) {
-  //   markerStates.push(i <= progress - 1);
-  // }
-
-  // const markers = markerStates.map((state, i) => {
-  //   return <Marker isOn={state} key={i}></Marker>;
-  // });
-  const topY = progress * 50 - 100;
-
   return (
     <div className="racetrack">
       <div className="track-head">

@@ -1,7 +1,11 @@
 import "./App.css";
 import { Racetracks } from "./components/Racetracks";
+import { useFirehose } from "./hooks/useFirehose";
+
+const wordsToRace = ["😭", "comic", "missouri", "five"];
 
 function App() {
+  const { postText, wordCount } = useFirehose(wordsToRace);
   return (
     <div className="parent">
       <div className="header">
@@ -35,7 +39,11 @@ function App() {
         </div>
         {/* Do I need the "tracks" wrapper? */}
         <div className="tracks">
-          <Racetracks></Racetracks>
+          <Racetracks
+            wordsToRace={wordsToRace}
+            wordCount={wordCount}
+            postText={postText}
+          ></Racetracks>
         </div>
       </div>
       <div className="post-card-slot">
