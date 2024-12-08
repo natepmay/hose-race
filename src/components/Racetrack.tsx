@@ -4,11 +4,11 @@ import "../App.css";
 export function Racetrack({
   name,
   progress,
-  postText,
+  postLightState,
 }: {
   name: string;
   progress: number;
-  postText: string;
+  postLightState: boolean;
 }) {
   return (
     <div className="racetrack">
@@ -17,7 +17,7 @@ export function Racetrack({
         <div className="track-score">{progress}</div>
       </div>
       <div className="track-main"></div>
-      <div className="post-light on"></div>
+      <div className={`post-light ${postLightState ? "on" : ""}`}></div>
     </div>
   );
 }

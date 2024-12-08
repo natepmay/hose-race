@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import type { PostText } from "../types/types";
 
 const english = /^en(-[A-Z0-9]{2,3})?$/;
 
@@ -17,7 +18,7 @@ function setInitialWordCount(wordsToRace: string[]) {
 
 export function useFirehose(wordsToRace: string[]) {
   const [wordCount, setWordCount] = useState(setInitialWordCount(wordsToRace));
-  const [postText, setPostText] = useState("");
+  const [postText, setPostText] = useState({} as PostText);
   useEffect(() => {
     const firehoseSocket = new WebSocket(
       "wss://jetstream2.us-west.bsky.network/subscribe"
@@ -33,7 +34,7 @@ export function useFirehose(wordsToRace: string[]) {
         for (const word of wordsToRace) {
           if (matchWord(word, text)) {
             console.log(`+++${word.toUpperCase()}\n${text}`);
-            setPostText(text);
+            setPostText({ word: word, text: text });
             setWordCount({
               ...wordCount,
               [word]: wordCount[word] + 1,

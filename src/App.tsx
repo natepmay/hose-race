@@ -39,11 +39,7 @@ function App() {
         </div>
         {/* Do I need the "tracks" wrapper? */}
         <div className="tracks">
-          <Racetracks
-            wordsToRace={wordsToRace}
-            wordCount={wordCount}
-            postText={postText}
-          ></Racetracks>
+          <Racetracks wordCount={wordCount} postText={postText}></Racetracks>
         </div>
       </div>
       <div className="post-card-slot">
