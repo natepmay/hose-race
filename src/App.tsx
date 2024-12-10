@@ -3,14 +3,24 @@ import "./App.css";
 import { AppState } from "./types/types";
 
 import { Game } from "./components/Game";
+import { Onboard } from "./components/Onboard";
 
-import { useFirehose } from "./hooks/useFirehose";
 import { loadLeague } from "./utils/loadLeague";
 
 const league = await loadLeague();
 
 function App() {
   const [appState, setAppState] = useState("onboard" as AppState);
+
+  let innerComponent;
+  switch (appState) {
+    case "onboard":
+      innerComponent = <Onboard onBegin={() => setAppState("play")}></Onboard>;
+      break;
+    case "play":
+      innerComponent = <Game league={league}></Game>;
+      break;
+  }
 
   return (
     <div className="parent">
@@ -20,7 +30,8 @@ function App() {
           <div>3010</div>
         </div>
       </div>
-      <Game league={league}></Game>
+
+      {innerComponent}
 
       <div className="footer">
         <div className="footer-text">
