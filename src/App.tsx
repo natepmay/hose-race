@@ -15,6 +15,9 @@ function App() {
           <div>3010</div>
         </div>
       </div>
+      <div className="post-card-slot">
+        <div className="post-card">{postText.text}</div>
+      </div>
       <div className="all-racetrack-content">
         <div className="lines">
           <div className="full-line line1">
@@ -46,9 +49,6 @@ function App() {
             finishLine={finishLine}
           ></Racetracks>
         </div>
-      </div>
-      <div className="post-card-slot">
-        <div className="post-card">{postText.text}</div>
       </div>
       <div className="footer">
         <div className="footer-text">
