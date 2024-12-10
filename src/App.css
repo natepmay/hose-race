@@ -62,26 +62,6 @@ body {
   align-items: start;
 }
 
-.full-line.line1 {
-  top: 0%;
-}
-
-.full-line.line2 {
-  top: 25%;
-}
-
-.full-line.line3 {
-  top: 50%;
-}
-
-.full-line.line4 {
-  top: 75%;
-}
-
-.full-line.finish {
-  top: 100%;
-}
-
 .line-label {
   margin-right: 5px;
   position: relative;

@@ -10,3 +10,9 @@ export type PostLightStates = {
 export interface WordCount {
   [index: string]: number;
 }
+
+export interface League {
+  words: [string, string, string, string];
+  medianPerSecond: number;
+  rangePerSecond: number;
+}

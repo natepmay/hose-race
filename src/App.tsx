@@ -1,12 +1,13 @@
 import "./App.css";
 import { Racetracks } from "./components/Racetracks";
+import { Lines } from "./components/Lines";
 import { useFirehose } from "./hooks/useFirehose";
+import { loadLeague } from "./utils/loadLeague";
 
-const wordsToRace = ["crazy", "comic", "missouri", "five"];
-const finishLine = 100;
+const league = await loadLeague();
 
 function App() {
-  const { postText, wordCount } = useFirehose(wordsToRace);
+  const { postText, wordCount } = useFirehose(league.words);
   return (
     <div className="parent">
       <div className="header">
@@ -19,34 +20,13 @@ function App() {
         <div className="post-card">{postText.text}</div>
       </div>
       <div className="all-racetrack-content">
-        <div className="lines">
-          <div className="full-line line1">
-            <div className="line-label">0</div>
-            <div className="line"></div>
-          </div>
-          <div className="full-line line2">
-            <div className="line-label">25</div>
-            <div className="line"></div>
-          </div>
-          <div className="full-line line3">
-            <div className="line-label">50</div>
-            <div className="line"></div>
-          </div>
-          <div className="full-line line4">
-            <div className="line-label">75</div>
-            <div className="line"></div>
-          </div>
-          <div className="full-line finish">
-            <div className="line-label">100</div>
-            <div className="line"></div>
-          </div>
-        </div>
+        <Lines finishLine={league.finishLine}></Lines>
         {/* Do I need the "tracks" wrapper? */}
         <div className="tracks">
           <Racetracks
             wordCount={wordCount}
             postText={postText}
-            finishLine={finishLine}
+            finishLine={league.finishLine}
           ></Racetracks>
         </div>
       </div>
