@@ -3,7 +3,7 @@ import { Racetracks } from "./components/Racetracks";
 import { useFirehose } from "./hooks/useFirehose";
 
 const wordsToRace = ["crazy", "comic", "missouri", "five"];
-const finishLine = 15;
+const finishLine = 100;
 
 function App() {
   const { postText, wordCount } = useFirehose(wordsToRace);

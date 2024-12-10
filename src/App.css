@@ -1,7 +1,8 @@
 body {
   --maxwidth: 600px;
-  --racetrack-width: 90px;
+  --racetrack-width: 60px;
   --track-head-height: 3rem;
+  --hose-height: 300px;
   padding: 0;
   margin: 0;
 }
@@ -119,6 +120,31 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.track-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Thanks to chatgpt for .hose and .hose::before */
+.hose {
+  width: 20px;
+  height: var(--hose-height);
+  background-color: green; /* Hose color */
+  position: relative; /* To position the pseudo-element */
+}
+
+.hose::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5px; /* Offset inward */
+  width: 4px; /* Stripe width */
+  height: 100%; /* Full height of the hose */
+  background-color: yellow; /* Stripe color */
 }
 
 .post-card-slot {

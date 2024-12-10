@@ -7,5 +7,13 @@ export function Hose({
   progress: number;
   finishLine: number;
 }) {
-  return <div className="track-main"></div>;
+  const progressPct = (progress / finishLine) * 100;
+  return (
+    <div className="track-main">
+      <div
+        className="hose"
+        style={{ top: `calc(${progressPct}% - var(--hose-height))` }}
+      ></div>
+    </div>
+  );
 }
