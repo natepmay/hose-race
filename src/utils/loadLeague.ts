@@ -1,8 +1,4 @@
-import { League } from "../types/types";
-
-interface AugmentedLeague extends League {
-  finishLine: number;
-}
+import { League, AugmentedLeague } from "../types/types";
 
 const TARGET_SECONDS = 24;
 

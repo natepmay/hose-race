@@ -16,3 +16,9 @@ export interface League {
   medianPerSecond: number;
   rangePerSecond: number;
 }
+
+export interface AugmentedLeague extends League {
+  finishLine: number;
+}
+
+export type AppState = "onboard" | "countdown" | "select" | "play" | "result";
