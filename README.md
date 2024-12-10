@@ -5,7 +5,6 @@ TODO:
 - format the text in the post card (limit and highlight the word in question)
 - add nozzles to the hoses
 - styles
-- allow user to choose a word from league
 - end game/scoring
 
 BUGS:
