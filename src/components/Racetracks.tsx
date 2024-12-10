@@ -1,14 +1,6 @@
 import { Racetrack } from "./Racetrack";
-import { useEffect, useState } from "react";
-import { PostText, PostLightStates, WordCount } from "../types/types";
-
-function setInitialPostLightStates(words: string[]) {
-  const out = {} as PostLightStates;
-  for (const word of words) {
-    out[word] = false;
-  }
-  return out;
-}
+import { PostText, WordCount } from "../types/types";
+import { usePostLightStates } from "../hooks/usePostLightStates";
 
 export function Racetracks({
   wordCount,
@@ -19,22 +11,7 @@ export function Racetracks({
   postText: PostText;
   finishLine: number;
 }) {
-  const [postLightStates, setPostLightStates] = useState(
-    setInitialPostLightStates(Object.keys(wordCount))
-  );
-
-  useEffect(() => {
-    const newStates = {} as PostLightStates;
-    for (const word in wordCount) {
-      newStates[word] = word === postText.word;
-    }
-    setPostLightStates(newStates);
-    const timeoutID = setTimeout(() => {
-      setPostLightStates(setInitialPostLightStates(Object.keys(wordCount)));
-    }, 1000);
-    return () => clearTimeout(timeoutID);
-  }, [wordCount, postText]);
-
+  const postLightStates = usePostLightStates(wordCount, postText);
   const racetracks = Object.keys(wordCount).map((word, index) => {
     return (
       <Racetrack
