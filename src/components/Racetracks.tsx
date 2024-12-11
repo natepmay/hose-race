@@ -2,15 +2,19 @@ import { Racetrack } from "./Racetrack";
 import { PostText, WordCount } from "../types/types";
 import { usePostLightStates } from "../hooks/usePostLightStates";
 
+interface Params {
+  wordCount: WordCount;
+  postText: PostText;
+  finishLine: number;
+  chosenWord: string;
+}
+
 export function Racetracks({
   wordCount,
   postText,
   finishLine,
-}: {
-  wordCount: WordCount;
-  postText: PostText;
-  finishLine: number;
-}) {
+  chosenWord,
+}: Params) {
   const postLightStates = usePostLightStates(wordCount, postText);
   const racetracks = Object.keys(wordCount).map((word, index) => {
     return (

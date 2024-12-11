@@ -4,18 +4,22 @@ import { AppState, AugmentedLeague } from "./types/types";
 
 import { Game } from "./components/Game";
 import { Onboard } from "./components/Onboard";
-
-// import { loadLeague } from "./utils/loadLeague";
 import { SelectWord } from "./components/SelectWord";
-
-// const league = await loadLeague();
+import { Result } from "./components/Result";
 
 function App() {
   const [appState, setAppState] = useState("onboard" as AppState);
   const [chosenWord, setChosenWord] = useState("");
   const [league, setLeague] = useState({} as AugmentedLeague);
+  const [finishers, setFinishers] = useState([] as string[]);
+  const [score, setScore] = useState(0);
+
+  if (finishers.includes(chosenWord) && appState === "play") {
+    setAppState("result");
+  }
 
   console.log("chosen word: ", chosenWord);
+  console.log("finishers ", finishers);
 
   function handleSubmitWord({
     nextWord,
@@ -27,6 +31,10 @@ function App() {
     setChosenWord(nextWord);
     setLeague(nextLeague);
     setAppState("play");
+  }
+
+  function handleAddFinisher(finisher: string) {
+    if (!finishers.includes(finisher)) setFinishers([...finishers, finisher]);
   }
 
   let innerComponent;
@@ -42,8 +50,16 @@ function App() {
       );
       break;
     case "play":
-      innerComponent = <Game league={league}></Game>;
+      innerComponent = (
+        <Game
+          league={league}
+          onAddFinisher={handleAddFinisher}
+          chosenWord={chosenWord}
+        ></Game>
+      );
       break;
+    case "result":
+      innerComponent = <Result score={score} finishers={finishers}></Result>;
   }
 
   return (
@@ -51,7 +67,7 @@ function App() {
       <div className="header">
         <div className="header-text">
           <div>Hose Race</div>
-          <div>3010</div>
+          <div>{score}</div>
         </div>
       </div>
       {innerComponent}

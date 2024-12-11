@@ -6,6 +6,9 @@ TODO:
 - add nozzles to the hoses
 - styles
 - end game/scoring
+  - display and update score on results page
+  - freeze each hose when it has finished and display its place instead of its progress
+- consider moving league, wordCount, chosenWord, and finishers into context
 
 BUGS:
 

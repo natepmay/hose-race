@@ -33,13 +33,13 @@ export function useFirehose(wordsToRace: string[]) {
         const text = data.commit.record.text as string;
         for (const word of wordsToRace) {
           if (matchWord(word, text.toLowerCase())) {
-            console.log(`+++${word.toUpperCase()}\n${text}`);
+            // console.log(`+++${word.toUpperCase()}\n${text}`);
             setPostText({ word: word, text: text });
             setWordCount({
               ...wordCount,
               [word]: wordCount[word] + 1,
             });
-            console.log("----------------");
+            // console.log("----------------");
           }
         }
       }

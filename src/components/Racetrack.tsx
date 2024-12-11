@@ -1,17 +1,19 @@
 import "../App.css";
 import { Hose } from "./Hose";
 
+interface Params {
+  name: string;
+  progress: number;
+  postLightState: boolean;
+  finishLine: number;
+}
+
 export function Racetrack({
   name,
   progress,
   postLightState,
   finishLine,
-}: {
-  name: string;
-  progress: number;
-  postLightState: boolean;
-  finishLine: number;
-}) {
+}: Params) {
   return (
     <div className="racetrack">
       <div className={`post-light ${postLightState ? "on" : ""}`}></div>

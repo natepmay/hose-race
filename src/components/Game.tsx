@@ -4,8 +4,17 @@ import { Lines } from "./Lines";
 import { Racetracks } from "./Racetracks";
 import { useFirehose } from "../hooks/useFirehose";
 
-export function Game({ league }: { league: AugmentedLeague }) {
+interface Params {
+  league: AugmentedLeague;
+  onAddFinisher: (finisher: string) => void;
+  chosenWord: string;
+}
+
+export function Game({ league, onAddFinisher, chosenWord }: Params) {
   const { postText, wordCount } = useFirehose(league.words);
+  for (const word in wordCount) {
+    if (wordCount[word] >= league.finishLine) onAddFinisher(word);
+  }
   return (
     <div className="game">
       <div className="post-card-slot">
@@ -19,6 +28,7 @@ export function Game({ league }: { league: AugmentedLeague }) {
             wordCount={wordCount}
             postText={postText}
             finishLine={league.finishLine}
+            chosenWord={chosenWord}
           ></Racetracks>
         </div>
       </div>
