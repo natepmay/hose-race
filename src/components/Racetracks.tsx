@@ -7,6 +7,7 @@ interface Params {
   postText: PostText;
   finishLine: number;
   chosenWord: string;
+  finishers: string[];
 }
 
 export function Racetracks({
@@ -14,6 +15,7 @@ export function Racetracks({
   postText,
   finishLine,
   chosenWord,
+  finishers,
 }: Params) {
   const postLightStates = usePostLightStates(wordCount, postText);
   const racetracks = Object.keys(wordCount).map((word, index) => {
@@ -23,6 +25,8 @@ export function Racetracks({
         progress={wordCount[word]}
         postLightState={postLightStates[word]}
         finishLine={finishLine}
+        chosenWord={chosenWord}
+        finishers={finishers}
         key={index}
       ></Racetrack>
     );

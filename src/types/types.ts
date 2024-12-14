@@ -22,3 +22,8 @@ export interface AugmentedLeague extends League {
 }
 
 export type AppState = "onboard" | "countdown" | "select" | "play" | "result";
+
+export interface ResultsData {
+  place: -1 | 0 | 1 | 2 | 3;
+  newPoints: number;
+}

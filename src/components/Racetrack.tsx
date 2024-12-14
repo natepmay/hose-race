@@ -6,6 +6,8 @@ interface Params {
   progress: number;
   postLightState: boolean;
   finishLine: number;
+  chosenWord: string;
+  finishers: string[];
 }
 
 export function Racetrack({
@@ -13,6 +15,8 @@ export function Racetrack({
   progress,
   postLightState,
   finishLine,
+  chosenWord,
+  finishers,
 }: Params) {
   return (
     <div className="racetrack">

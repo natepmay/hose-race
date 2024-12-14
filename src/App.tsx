@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { AppState, AugmentedLeague } from "./types/types";
+import { AppState, AugmentedLeague, ResultsData } from "./types/types";
 
 import { Game } from "./components/Game";
 import { Onboard } from "./components/Onboard";
@@ -13,8 +13,25 @@ function App() {
   const [league, setLeague] = useState({} as AugmentedLeague);
   const [finishers, setFinishers] = useState([] as string[]);
   const [score, setScore] = useState(0);
+  const [resultsData, setResultsData] = useState({} as ResultsData);
 
   if (finishers.includes(chosenWord) && appState === "play") {
+    const POINTS = {
+      0: 300,
+      1: 200,
+      2: 100,
+      3: 0,
+    };
+
+    const place = finishers.indexOf(chosenWord) as -1 | 0 | 1 | 2 | 3;
+    const newPoints = place in POINTS ? POINTS[place as 0 | 1 | 2 | 3] : 0;
+
+    setResultsData({
+      place: place,
+      newPoints: newPoints,
+    });
+
+    setScore(score + newPoints);
     setAppState("result");
   }
 
@@ -37,6 +54,13 @@ function App() {
     if (!finishers.includes(finisher)) setFinishers([...finishers, finisher]);
   }
 
+  function handlePlayAgain() {
+    setChosenWord("");
+    setLeague({} as AugmentedLeague);
+    setFinishers([] as string[]);
+    setAppState("select");
+  }
+
   let innerComponent;
   switch (appState) {
     case "onboard":
@@ -55,11 +79,18 @@ function App() {
           league={league}
           onAddFinisher={handleAddFinisher}
           chosenWord={chosenWord}
+          finishers={finishers}
         ></Game>
       );
       break;
     case "result":
-      innerComponent = <Result score={score} finishers={finishers}></Result>;
+      innerComponent = (
+        <Result
+          score={score}
+          resultsData={resultsData}
+          onPlayAgain={handlePlayAgain}
+        ></Result>
+      );
   }
 
   return (

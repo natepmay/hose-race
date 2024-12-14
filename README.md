@@ -2,11 +2,11 @@
 
 TODO:
 
+- do I need a useEffect to get the result in App?
 - format the text in the post card (limit and highlight the word in question)
 - add nozzles to the hoses
 - styles
 - end game/scoring
-  - display and update score on results page
   - freeze each hose when it has finished and display its place instead of its progress
 - consider moving league, wordCount, chosenWord, and finishers into context
   - maybe you don't need this if you pass `chosenWord`, `finishers` and an explicit `key` to `Racetrack` and pass a function that will call `setScore` to `Result`

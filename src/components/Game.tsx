@@ -8,9 +8,10 @@ interface Params {
   league: AugmentedLeague;
   onAddFinisher: (finisher: string) => void;
   chosenWord: string;
+  finishers: string[];
 }
 
-export function Game({ league, onAddFinisher, chosenWord }: Params) {
+export function Game({ league, onAddFinisher, chosenWord, finishers }: Params) {
   const { postText, wordCount } = useFirehose(league.words);
   for (const word in wordCount) {
     if (wordCount[word] >= league.finishLine) onAddFinisher(word);
@@ -29,6 +30,7 @@ export function Game({ league, onAddFinisher, chosenWord }: Params) {
             postText={postText}
             finishLine={league.finishLine}
             chosenWord={chosenWord}
+            finishers={finishers}
           ></Racetracks>
         </div>
       </div>
