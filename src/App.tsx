@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { AppState, AugmentedLeague, ResultsData } from "./types/types";
+import { getResultsData } from "./utils/getResultsData";
 
 import { Game } from "./components/Game";
 import { Onboard } from "./components/Onboard";
@@ -16,27 +17,11 @@ function App() {
   const [resultsData, setResultsData] = useState({} as ResultsData);
 
   if (finishers.includes(chosenWord) && appState === "play") {
-    const POINTS = {
-      0: 300,
-      1: 200,
-      2: 100,
-      3: 0,
-    };
-
-    const place = finishers.indexOf(chosenWord) as -1 | 0 | 1 | 2 | 3;
-    const newPoints = place in POINTS ? POINTS[place as 0 | 1 | 2 | 3] : 0;
-
-    setResultsData({
-      place: place,
-      newPoints: newPoints,
-    });
-
-    setScore(score + newPoints);
+    const resultsData = getResultsData(finishers, chosenWord);
+    setResultsData(resultsData);
+    setScore(score + resultsData.newPoints);
     setAppState("result");
   }
-
-  console.log("chosen word: ", chosenWord);
-  console.log("finishers ", finishers);
 
   function handleSubmitWord({
     nextWord,

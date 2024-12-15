@@ -6,10 +6,6 @@ TODO:
 - format the text in the post card (limit and highlight the word in question)
 - add nozzles to the hoses
 - styles
-- end game/scoring
-  - freeze each hose when it has finished and display its place instead of its progress
-- consider moving league, wordCount, chosenWord, and finishers into context
-  - maybe you don't need this if you pass `chosenWord`, `finishers` and an explicit `key` to `Racetrack` and pass a function that will call `setScore` to `Result`
 - consider passing `Racetrack` components as `children` to `Racetracks` (see [this note](https://react.dev/learn/passing-data-deeply-with-context#before-you-use-context))
 
 BUGS:

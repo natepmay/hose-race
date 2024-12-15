@@ -1,5 +1,7 @@
 import "../App.css";
+import { getResultsData } from "../utils/getResultsData";
 import { Hose } from "./Hose";
+import { ResultsData } from "../types/types";
 
 interface Params {
   name: string;
@@ -18,14 +20,30 @@ export function Racetrack({
   chosenWord,
   finishers,
 }: Params) {
+  let finished = false;
+  let localResultsData = {} as ResultsData;
+
+  if (finishers.includes(name)) {
+    finished = true;
+    localResultsData = getResultsData(finishers, name);
+  }
+
+  const indicator = chosenWord === name ? "*" : "";
+
   return (
     <div className="racetrack">
       <div className={`post-light ${postLightState ? "on" : ""}`}></div>
       <div className="track-head">
-        <div className="track-word">{name}</div>
-        <div className="track-score">{progress}</div>
+        <div className="track-word">{indicator + name + indicator}</div>
+        <div className="track-score">
+          {finished ? localResultsData.placeWord : progress}
+        </div>
       </div>
-      <Hose progress={progress} finishLine={finishLine}></Hose>
+      <Hose
+        progress={progress}
+        finishLine={finishLine}
+        finished={finished}
+      ></Hose>
     </div>
   );
 }
