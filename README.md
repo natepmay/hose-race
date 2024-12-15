@@ -39,11 +39,10 @@ $ deno run --allow-read --allow-write --allow-net name_of_file.ts
 
 ## TODO:
 
-- do I need a useEffect to get the result in App?
 - format the text in the post card (limit and highlight the word in question)
 - add nozzles to the hoses
+- animate the hose motion
 - styles
-- consider passing `Racetrack` components as `children` to `Racetracks` (see [this note](https://react.dev/learn/passing-data-deeply-with-context#before-you-use-context))
 
 ### BUGS:
 
