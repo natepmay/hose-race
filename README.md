@@ -43,6 +43,7 @@ $ deno run --allow-read --allow-write --allow-net name_of_file.ts
 - add nozzles to the hoses
 - animate the hose motion
 - styles
+- improve accessibility
 
 ### BUGS:
 
