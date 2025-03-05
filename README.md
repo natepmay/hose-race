@@ -21,8 +21,9 @@ None of the other files in the `data` folder are used for the front end of the a
 
 To run the web app locally:
 
+First clone this repo, then:
+
 ```bash
-$ git clone
 $ cd hose-race
 $ npm install
 $ npm run dev
