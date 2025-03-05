@@ -59,7 +59,7 @@ body {
   position: absolute;
   top: calc(var(--track-head-height) + 5px);
   width: 100%;
-  height: calc(100% - 15px - var(--track-head-height));
+  height: calc(100% - 5px - var(--track-head-height));
   border-color: purple;
 }
 
@@ -76,6 +76,7 @@ body {
   position: relative;
   top: -0.5rem;
   height: 1rem;
+  line-height: 1rem;
   width: 20px;
   text-align: end;
 }
@@ -151,6 +152,7 @@ body {
 .post-light {
   width: var(--racetrack-width);
   height: 5px;
+  flex-shrink: 0;
 }
 
 .post-light.on {
@@ -177,4 +179,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.footer {
+  margin-top: 15px;
 }
