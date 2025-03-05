@@ -121,7 +121,7 @@ body {
 /* Thanks to chatgpt for .hose and .hose::before */
 .hose {
   width: 20px;
-  height: var(--hose-height);
+  top: 0;
   background-color: green; /* Hose color */
   position: relative; /* To position the pseudo-element */
 }
