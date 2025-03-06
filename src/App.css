@@ -171,7 +171,6 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  white-space: pre;
   text-overflow: clip;
   font-family: "Courier New", Courier, monospace;
   overflow-x: hidden;
@@ -199,18 +198,20 @@ body {
   left: 0;
   width: 100px; /* Adjust width for fade effect */
   height: 100%;
-  background: linear-gradient(to right, white, transparent);
+  background: linear-gradient(to right, #242424, transparent);
   pointer-events: none; /* Ensures text remains selectable */
 }
 
 .post-card-item.center {
   color: green;
   font-weight: 900;
+  white-space: pre;
 }
 
 .post-card-item.right {
   text-align: left;
   position: relative;
+  white-space: pre;
 }
 
 .post-card-item.right::after {
@@ -220,8 +221,17 @@ body {
   right: 0;
   width: 100px; /* Adjust width for fade effect */
   height: 100%;
-  background: linear-gradient(to right, transparent, white);
+  background: linear-gradient(to right, transparent, #242424);
   pointer-events: none; /* Ensures text remains selectable */
+}
+
+@media (prefers-color-scheme: light) {
+  .post-card-item.left::before {
+    background: linear-gradient(to right, white, transparent);
+  }
+  .post-card-item.right::after {
+    background: linear-gradient(to right, transparent, white);
+  }
 }
 
 .header,
