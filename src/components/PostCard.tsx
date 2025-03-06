@@ -13,7 +13,9 @@ const getBeforeWord = (index: number, text: string) => {
   return text.slice(index - leftPad, index);
 };
 
-// TODO add getDisplayWord because capitalization for word in text might not be just lowercase
+const getDisplayWord = (index: number, text: string, word: string) => {
+  return text.slice(index, index + word.length);
+};
 
 const getAfterWord = (index: number, text: string, word: string) => {
   const endIndex = index + word.length;
@@ -40,8 +42,9 @@ export function PostCard({
     const { word, text } = postText;
     const index = getIndex(text, word);
     const beforeWord = getBeforeWord(index, text);
+    const displayWord = getDisplayWord(index, text, word);
     const afterWord = getAfterWord(index, text, word);
-    setTextData({ word, beforeWord, afterWord, text });
+    setTextData({ word: displayWord, beforeWord, afterWord, text });
   }, [postText]);
 
   return (
