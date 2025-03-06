@@ -139,8 +139,8 @@ body {
 }
 
 .post-card-slot {
-  /* width: 100%;
-  max-width: var(--maxwidth); */
+  width: 100%;
+  max-width: var(--maxwidth);
   height: 8rem;
   display: flex;
   justify-content: center;
