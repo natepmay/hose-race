@@ -7,6 +7,7 @@ import { Game } from "./components/Game";
 import { Onboard } from "./components/Onboard";
 import { SelectWord } from "./components/SelectWord";
 import { Result } from "./components/Result";
+import { GithubLogo } from "./components/GithubLogo";
 
 function App() {
   const [appState, setAppState] = useState("onboard" as AppState);
@@ -90,7 +91,9 @@ function App() {
       <div className="footer">
         <div className="footer-text">
           <div>by Nate May</div>
-          <div>[GH]</div>
+          <div>
+            <GithubLogo />
+          </div>
         </div>
       </div>
     </div>

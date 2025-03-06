@@ -225,15 +225,6 @@ body {
   pointer-events: none; /* Ensures text remains selectable */
 }
 
-@media (prefers-color-scheme: light) {
-  .post-card-item.left::before {
-    background: linear-gradient(to right, white, transparent);
-  }
-  .post-card-item.right::after {
-    background: linear-gradient(to right, transparent, white);
-  }
-}
-
 .header,
 .footer {
   height: 80px;
@@ -245,4 +236,20 @@ body {
 
 .footer {
   margin-top: 15px;
+}
+
+.logo path {
+  fill: white;
+}
+
+@media (prefers-color-scheme: light) {
+  .post-card-item.left::before {
+    background: linear-gradient(to right, white, transparent);
+  }
+  .post-card-item.right::after {
+    background: linear-gradient(to right, transparent, white);
+  }
+  .logo path {
+    fill: black;
+  }
 }
