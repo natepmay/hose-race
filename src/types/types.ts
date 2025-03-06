@@ -1,6 +1,7 @@
 export type PostText = {
   word: string;
   text: string;
+  url: string;
 };
 
 export type PostLightStates = {

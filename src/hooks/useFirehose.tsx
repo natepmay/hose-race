@@ -30,16 +30,15 @@ export function useFirehose(wordsToRace: string[]) {
         data.commit?.record?.$type === "app.bsky.feed.post" &&
         data.commit.record.langs?.some((locale: string) => english.test(locale))
       ) {
+        const url = `https://bsky.app/profile/${data.did}/post/${data.commit.rkey}`;
         const text = data.commit.record.text as string;
         for (const word of wordsToRace) {
           if (matchWord(word, text.toLowerCase())) {
-            // console.log(`+++${word.toUpperCase()}\n${text}`);
-            setPostText({ word: word, text: text });
+            setPostText({ word: word, text: text, url: url });
             setWordCount({
               ...wordCount,
               [word]: wordCount[word] + 1,
             });
-            // console.log("----------------");
           }
         }
       }

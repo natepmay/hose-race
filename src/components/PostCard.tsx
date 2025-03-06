@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { PostText } from "../types/types";
 
 const CHAR_PAD = 100;
 
@@ -24,34 +25,34 @@ const getAfterWord = (index: number, text: string, word: string) => {
   return text.slice(endIndex, endIndex + rightPad);
 };
 
-export function PostCard({
-  postText,
-}: {
-  postText: { word: string; text: string };
-}) {
+export function PostCard({ postText }: { postText: PostText }) {
   const [textData, setTextData] = useState({
     word: "",
     beforeWord: "",
     afterWord: "",
     text: "",
+    url: "",
   });
 
   useEffect(() => {
     if (!postText.text) return;
     console.log(postText);
-    const { word, text } = postText;
+    const { word, text, url } = postText;
     const index = getIndex(text, word);
     const beforeWord = getBeforeWord(index, text);
     const displayWord = getDisplayWord(index, text, word);
     const afterWord = getAfterWord(index, text, word);
-    setTextData({ word: displayWord, beforeWord, afterWord, text });
+    setTextData({ word: displayWord, beforeWord, afterWord, text, url });
+    console.log(url);
   }, [postText]);
 
   return (
-    <div className="post-card">
-      <span className="post-card-item left">{textData.beforeWord}</span>
-      <span className="post-card-item center"> {textData.word}</span>
-      <span className="post-card-item right">{textData.afterWord}</span>
-    </div>
+    <a href={postText.url} target="_blank" rel="noopener noreferrer">
+      <div className="post-card">
+        <span className="post-card-item left">{textData.beforeWord}</span>
+        <span className="post-card-item center"> {textData.word}</span>
+        <span className="post-card-item right">{textData.afterWord}</span>
+      </div>
+    </a>
   );
 }
