@@ -3,6 +3,7 @@ import "../App.css";
 import { Lines } from "./Lines";
 import { Racetracks } from "./Racetracks";
 import { useFirehose } from "../hooks/useFirehose";
+import { PostCard } from "./PostCard";
 
 interface Params {
   league: AugmentedLeague;
@@ -23,7 +24,7 @@ export function Game({ league, onAddFinisher, chosenWord, finishers }: Params) {
   // };
   // const postText = {
   //   word: "one",
-  //   text: "asdf",
+  //   text: "Hey here's a long-ass sentence with the word in it the word isss...one! ...and now the sentence continues on for a bit of a long-ass time so we can cut it off on both sides but it doesn't have to be equal on both sides for instance it's longer at the end here.",
   // };
   // -- END FOR DEBUGGING
 
@@ -33,7 +34,7 @@ export function Game({ league, onAddFinisher, chosenWord, finishers }: Params) {
   return (
     <div className="game">
       <div className="post-card-slot">
-        <div className="post-card">{postText.text}</div>
+        <PostCard postText={postText} />
       </div>
       <div className="all-racetrack-content">
         <Lines finishLine={league.finishLine}></Lines>

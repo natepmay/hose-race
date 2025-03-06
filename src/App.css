@@ -139,11 +139,12 @@ body {
 }
 
 .post-card-slot {
-  width: 100%;
+  /* width: 100%;
+  max-width: var(--maxwidth); */
   height: 8rem;
-  overflow: hidden;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .track-main {
@@ -160,17 +161,67 @@ body {
   background-color: green;
 }
 
-.post-card-slot {
-  display: flex;
-  flex-direction: column;
-}
-
 .post-card {
-  text-align: center;
+  width: 100%;
+  max-width: var(--maxwidth);
+  height: 1rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   padding-top: 5px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
+  white-space: pre;
+  text-overflow: clip;
+  font-family: "Courier New", Courier, monospace;
+  overflow-x: hidden;
+}
+
+.post-card-item {
+  /* border: 1px solid white; */
+  /* text-overflow: clip; */
+  overflow-x: hidden;
+  height: 1.5rem;
+  /* white-space: pre; */
+}
+
+.post-card-item.left {
+  text-align: right;
+  direction: rtl;
+  position: relative;
+}
+
+/* ChatGPT provided these fades */
+.post-card-item.left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px; /* Adjust width for fade effect */
+  height: 100%;
+  background: linear-gradient(to right, white, transparent);
+  pointer-events: none; /* Ensures text remains selectable */
+}
+
+.post-card-item.center {
+  color: green;
+  font-weight: 900;
+}
+
+.post-card-item.right {
+  text-align: left;
+  position: relative;
+}
+
+.post-card-item.right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px; /* Adjust width for fade effect */
+  height: 100%;
+  background: linear-gradient(to right, transparent, white);
+  pointer-events: none; /* Ensures text remains selectable */
 }
 
 .header,
