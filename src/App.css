@@ -125,7 +125,7 @@ body {
   top: 0;
   background-color: green; /* Hose color */
   position: relative; /* To position the pseudo-element */
-  transition: height 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .hose::before {
