@@ -47,7 +47,12 @@ export function PostCard({ postText }: { postText: PostText }) {
   }, [postText]);
 
   return (
-    <a href={postText.url} target="_blank" rel="noopener noreferrer">
+    <a
+      href={postText.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ width: "100%" }}
+    >
       <div className="post-card">
         <span className="post-card-item left">{textData.beforeWord}</span>
         <span className="post-card-item center"> {textData.word}</span>
