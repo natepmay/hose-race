@@ -1,3 +1,5 @@
+import { Trophy } from "lucide-react";
+
 import "../App.css";
 import { getResultsData } from "../utils/getResultsData";
 import { Hose } from "./Hose";
@@ -44,6 +46,9 @@ export function Racetrack({
         finishLine={finishLine}
         finished={finished}
       ></Hose>
+      <div className="trophy-container">
+        <Trophy color="#e5a50a" size="48" />
+      </div>
     </div>
   );
 }

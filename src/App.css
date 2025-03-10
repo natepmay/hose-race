@@ -138,6 +138,18 @@ body {
   background-color: yellow; /* Stripe color */
 }
 
+.trophy-container {
+  position: absolute;
+  top: calc(var(--track-head-height) + 5px);
+  width: var(--racetrack-width);
+  height: calc(100% - 5px - var(--track-head-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid white; */
+}
+
 .post-card-slot {
   width: 100%;
   max-width: var(--maxwidth);
