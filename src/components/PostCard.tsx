@@ -36,7 +36,7 @@ export function PostCard({ postText }: { postText: PostText }) {
 
   useEffect(() => {
     if (!postText.text) return;
-    console.log(postText);
+    console.log("postText: ", postText);
     const { word, text, url } = postText;
     const index = getIndex(text, word);
     const beforeWord = getBeforeWord(index, text);
@@ -54,7 +54,11 @@ export function PostCard({ postText }: { postText: PostText }) {
       style={{ width: "100%" }}
     >
       <div className="post-card">
-        <span className="post-card-item left">{textData.beforeWord}</span>
+        <span className="post-card-item left">
+          <span className="post-card-item inner-left">
+            {textData.beforeWord}
+          </span>
+        </span>
         <span className="post-card-item center"> {textData.word}</span>
         <span className="post-card-item right">{textData.afterWord}</span>
       </div>

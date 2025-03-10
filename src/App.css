@@ -177,17 +177,20 @@ body {
 }
 
 .post-card-item {
-  /* border: 1px solid white; */
-  /* text-overflow: clip; */
   overflow-x: hidden;
   height: 1.5rem;
-  /* white-space: pre; */
 }
 
+/* https://stackoverflow.com/questions/218065/overflow-to-left-instead-of-right */
 .post-card-item.left {
   text-align: right;
-  direction: rtl;
   position: relative;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.post-card-item.inner-left {
+  float: right;
 }
 
 /* ChatGPT provided these fades */
