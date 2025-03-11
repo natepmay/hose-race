@@ -1,8 +1,7 @@
-import { Trophy } from "lucide-react";
-
 import "../App.css";
 import { getResultsData } from "../utils/getResultsData";
 import { Hose } from "./Hose";
+import { Trophy } from "./Trophy";
 import { ResultsData } from "../types/types";
 
 interface Params {
@@ -46,9 +45,9 @@ export function Racetrack({
         finishLine={finishLine}
         finished={finished}
       ></Hose>
-      <div className="trophy-container">
-        <Trophy color="#e5a50a" size="48" />
-      </div>
+      {finished && (
+        <Trophy place={localResultsData.placeWord as "1st" | "2nd" | "3rd"} />
+      )}
     </div>
   );
 }
