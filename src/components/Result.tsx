@@ -1,3 +1,5 @@
+import { Trophy } from "./Trophy";
+import { Frown } from "lucide-react";
 import { ResultsData } from "../types/types";
 
 interface Params {
@@ -6,7 +8,15 @@ interface Params {
   onPlayAgain: () => void;
 }
 
-const PLACE_WORDS = {
+type Placer = "1st" | "2nd" | "3rd";
+
+function isPlacer(word: string): word is Placer {
+  return ["1st", "2nd", "3rd"].includes(word);
+}
+
+type Finisher = Placer | "4th" | "last";
+
+const PLACE_WORDS: Record<number, Finisher> = {
   0: "1st",
   1: "2nd",
   2: "3rd",
@@ -21,6 +31,11 @@ export function Result({ score, resultsData, onPlayAgain }: Params) {
 
   return (
     <div>
+      {isPlacer(placeWord) ? (
+        <Trophy place={placeWord} size="68" />
+      ) : (
+        <Frown color="green" size="68" />
+      )}
       <h2>
         You finished in <strong>{placeWord} place</strong>.
       </h2>

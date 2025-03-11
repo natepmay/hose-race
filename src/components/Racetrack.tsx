@@ -46,7 +46,12 @@ export function Racetrack({
         finished={finished}
       ></Hose>
       {finished && (
-        <Trophy place={localResultsData.placeWord as "1st" | "2nd" | "3rd"} />
+        <div className="trophy-container">
+          <Trophy
+            place={localResultsData.placeWord as "1st" | "2nd" | "3rd"}
+            size="48"
+          />
+        </div>
       )}
     </div>
   );
