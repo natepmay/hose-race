@@ -42,6 +42,7 @@ export function SelectWord({
         <label htmlFor={word}>{word}</label>
       </div>
     ));
+
   return (
     <div className="select-word" style={{ textAlign: "center" }}>
       <form onSubmit={handleSubmit}>
@@ -54,7 +55,9 @@ export function SelectWord({
           </legend>
           <div style={{ textAlign: "left" }}>{wordItems}</div>
           <div>
-            <button type="submit">Play!</button>
+            <button type="submit" disabled={chosenWord === ""}>
+              Play!
+            </button>
           </div>
         </fieldset>
       </form>
