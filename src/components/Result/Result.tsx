@@ -1,4 +1,5 @@
 import { Trophy } from "../Trophy/Trophy";
+import { Button } from "../Button/Button";
 import { Frown } from "lucide-react";
 import { ResultsData } from "../../types/types";
 
@@ -41,7 +42,7 @@ export function Result({ score, resultsData, onPlayAgain }: Params) {
       </h2>
       <h3>You've earned {resultsData.newPoints} points.</h3>
       <h3>Your new score is {score}.</h3>
-      <button onClick={() => onPlayAgain()}>Play Again</button>
+      <Button onClick={() => onPlayAgain()}>Play Again</Button>
     </div>
   );
 }

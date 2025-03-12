@@ -1,3 +1,5 @@
+import { Button } from "../Button/Button";
+
 export function Onboard({ onBegin }: { onBegin: () => void }) {
   return (
     <div className="onboard" style={{ textAlign: "center" }}>
@@ -6,7 +8,7 @@ export function Onboard({ onBegin }: { onBegin: () => void }) {
         Guess which word will show up the most often on English-language
         Bluesky.
       </p>
-      <button onClick={onBegin}>Begin</button>
+      <Button onClick={onBegin}>Begin</Button>
     </div>
   );
 }

@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+
+import { Button } from "../Button/Button";
+
 import { useLoadLeague } from "../../hooks/useLoadLeague";
 import { AugmentedLeague } from "../../types/types";
 
@@ -55,9 +58,9 @@ export function SelectWord({
           </legend>
           <div style={{ textAlign: "left" }}>{wordItems}</div>
           <div>
-            <button type="submit" disabled={chosenWord === ""}>
+            <Button type="submit" disabled={chosenWord === ""}>
               Play!
-            </button>
+            </Button>
           </div>
         </fieldset>
       </form>
