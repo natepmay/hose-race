@@ -41,6 +41,7 @@ export function Hose({ progress, finishLine, finished, index }: Props) {
           style={{
             bottom: `calc(100% - ${progressPct}%)`,
             animationDelay: `${Math.random() * 5 + 2}s`,
+            opacity: finished ? 0 : 1,
           }}
         />
       </div>
