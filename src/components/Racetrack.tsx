@@ -11,6 +11,7 @@ interface Params {
   finishLine: number;
   chosenWord: string;
   finishers: string[];
+  index: number;
 }
 
 export function Racetrack({
@@ -20,6 +21,7 @@ export function Racetrack({
   finishLine,
   chosenWord,
   finishers,
+  index,
 }: Params) {
   let finished = false;
   let localResultsData = {} as ResultsData;
@@ -44,6 +46,7 @@ export function Racetrack({
         progress={progress}
         finishLine={finishLine}
         finished={finished}
+        index={index}
       ></Hose>
       {finished && (
         <div className="trophy-container">

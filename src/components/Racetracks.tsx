@@ -28,6 +28,7 @@ export function Racetracks({
         chosenWord={chosenWord}
         finishers={finishers}
         key={index}
+        index={index}
       ></Racetrack>
     );
   });

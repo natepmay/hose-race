@@ -8,23 +8,35 @@ interface Props {
   progress: number;
   finishLine: number;
   finished: boolean;
+  index: number;
 }
 
-export function Hose({ progress, finishLine, finished }: Props) {
+type Dimension = "width" | "height";
+
+const nozzleDims: Record<Dimension, number>[] = [
+  { width: 50, height: 73 },
+  { width: 30, height: 99 },
+  { width: 55, height: 135 },
+  { width: 60, height: 150 },
+];
+
+const srcs = [nozzle1, nozzle2, nozzle3, nozzle4];
+
+export function Hose({ progress, finishLine, finished, index }: Props) {
   const progressPct = finished ? 100 : (progress / finishLine) * 100;
   return (
     <div className="track-main">
       <div
         className="hose"
         style={{
-          height: `calc(${progressPct}% - 73px)`,
+          height: `calc(${progressPct}% - ${nozzleDims[index].height}px)`,
           opacity: finished ? 0 : 1,
         }}
       ></div>
       <div className="nozzle-container">
         <img
-          src={nozzle1}
-          width="50px"
+          src={srcs[index]}
+          width={nozzleDims[index].width}
           className="nozzle"
           style={{
             bottom: `calc(100% - ${progressPct}%)`,
