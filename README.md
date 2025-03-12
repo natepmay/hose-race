@@ -24,9 +24,9 @@ To run the web app locally:
 First clone this repo, then:
 
 ```bash
-$ cd hose-race
-$ npm install
-$ npm run dev
+cd hose-race
+npm install
+npm run dev
 ```
 
 To explore the `data` folder, you'll need to [install the Deno runtime](https://docs.deno.com/runtime/).
@@ -34,18 +34,18 @@ To explore the `data` folder, you'll need to [install the Deno runtime](https://
 Then:
 
 ```bash
-$ cd hose-race/data
-$ deno run --allow-read --allow-write --allow-net name_of_file.ts
+cd hose-race/data
+deno run --allow-read --allow-write --allow-net name_of_file.ts
 ```
 
-## TODO:
+## TODO
 
 - format the text in the post card (limit and highlight the word in question)
 - add nozzles to the hoses
 - animate the hose motion
 - styles
 
-### BUGS:
+### BUGS
 
 - lines aren't quite aligned with progress
 - hose height stretches its containing element which eats the postcard and header and footer. It seems like you can use `max-height` as long as it can reference a non-relative value (100% doesn't work). Will need to wrestle more with it (see chatgpt convo).

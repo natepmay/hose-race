@@ -8,6 +8,7 @@ import { Onboard } from "./components/Onboard";
 import { SelectWord } from "./components/SelectWord";
 import { Result } from "./components/Result";
 import { GithubLogo } from "./components/GithubLogo";
+import { Header } from "./components/Header";
 
 function App() {
   const [appState, setAppState] = useState("onboard" as AppState);
@@ -81,12 +82,7 @@ function App() {
 
   return (
     <div className="parent">
-      <div className="header">
-        <div className="header-text">
-          <div>Hose Race</div>
-          <div>{score}</div>
-        </div>
-      </div>
+      <Header score={score} />
       {innerComponent}
       <div className="footer">
         <div className="footer-text">
