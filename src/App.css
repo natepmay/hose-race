@@ -138,6 +138,38 @@ body {
   background-color: yellow; /* Stripe color */
 }
 
+.nozzle-container {
+  /* border: 1px solid white; */
+  position: absolute;
+  top: calc(var(--track-head-height) + 5px);
+  width: var(--racetrack-width);
+  height: calc(100% - 5px - var(--track-head-height));
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes jiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  2% {
+    transform: rotate(8deg);
+  }
+  4% {
+    transform: rotate(-8deg);
+  }
+  6% {
+    transform: rotate(0deg);
+  }
+}
+
+.nozzle {
+  position: absolute;
+  animation: jiggle 5s ease-in-out infinite;
+}
+
 .trophy-container {
   position: absolute;
   top: calc(var(--track-head-height) + 5px);
