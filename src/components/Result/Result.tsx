@@ -42,6 +42,13 @@ export function Result({ score, resultsData, onPlayAgain }: Params) {
       </h2>
       <h3>You've earned {resultsData.newPoints} points.</h3>
       <h3>Your new score is {score}.</h3>
+      <h3>Share your accomplishment! </h3>
+      <textarea
+        cols={50}
+        defaultValue={`I earned ${score} meaningless points by racing words on the Bluesky firehose.`}
+        style={{ display: "block", resize: "none" }}
+        readOnly
+      />
       <Button onClick={() => onPlayAgain()}>Play Again</Button>
     </div>
   );
