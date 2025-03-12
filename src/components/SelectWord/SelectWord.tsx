@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useLoadLeague } from "../hooks/useLoadLeague";
-import { AugmentedLeague } from "../types/types";
+import { useLoadLeague } from "../../hooks/useLoadLeague";
+import { AugmentedLeague } from "../../types/types";
 
 export function SelectWord({
   onSubmitWord,

@@ -1,9 +1,9 @@
-import { AugmentedLeague } from "../types/types";
-import "../App.css";
-import { Lines } from "./Lines";
-import { Racetracks } from "./Racetracks";
-import { useFirehose } from "../hooks/useFirehose";
-import { PostCard } from "./PostCard";
+import { AugmentedLeague } from "../../types/types";
+import "./Game.css";
+import { Lines } from "../Lines/Lines";
+import { Racetracks } from "../Racetracks/Racetracks";
+import { useFirehose } from "../../hooks/useFirehose";
+import { PostCard } from "../PostCard/PostCard";
 
 interface Params {
   league: AugmentedLeague;

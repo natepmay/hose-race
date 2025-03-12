@@ -1,5 +1,7 @@
+import "./PostCard.css";
+
 import { useEffect, useState } from "react";
-import { PostText } from "../types/types";
+import { PostText } from "../../types/types";
 
 const CHAR_PAD = 100;
 

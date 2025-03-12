@@ -1,8 +1,8 @@
-import "../App.css";
-import { getResultsData } from "../utils/getResultsData";
-import { Hose } from "./Hose";
-import { Trophy } from "./Trophy";
-import { ResultsData } from "../types/types";
+import "./Racetrack.css";
+import { getResultsData } from "../../utils/getResultsData";
+import { Hose } from "../Hose/Hose";
+import { Trophy } from "../Trophy/Trophy";
+import { ResultsData } from "../../types/types";
 
 interface Params {
   name: string;

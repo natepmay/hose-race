@@ -1,3 +1,5 @@
+import "./Lines.css";
+
 export function Lines({ finishLine }: { finishLine: number }) {
   const lines = [];
   for (let i = 0; i < 5; i++) {

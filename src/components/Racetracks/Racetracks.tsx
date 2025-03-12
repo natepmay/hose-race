@@ -1,6 +1,7 @@
-import { Racetrack } from "./Racetrack";
-import { PostText, WordCount } from "../types/types";
-import { usePostLightStates } from "../hooks/usePostLightStates";
+import "./Racetracks.css";
+import { Racetrack } from "../Racetrack/Racetrack";
+import { PostText, WordCount } from "../../types/types";
+import { usePostLightStates } from "../../hooks/usePostLightStates";
 
 interface Params {
   wordCount: WordCount;

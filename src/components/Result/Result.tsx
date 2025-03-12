@@ -1,6 +1,6 @@
-import { Trophy } from "./Trophy";
+import { Trophy } from "../Trophy/Trophy";
 import { Frown } from "lucide-react";
-import { ResultsData } from "../types/types";
+import { ResultsData } from "../../types/types";
 
 interface Params {
   score: number;

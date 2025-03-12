@@ -1,0 +1,59 @@
+.track-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Thanks to chatgpt for .hose and .hose::before */
+.hose {
+  width: 20px;
+  top: 0;
+  background-color: green; /* Hose color */
+  position: relative; /* To position the pseudo-element */
+  transition: all 0.5s ease-in-out;
+}
+
+.hose::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5px; /* Offset inward */
+  width: 4px; /* Stripe width */
+  height: 100%; /* Full height of the hose */
+  background-color: yellow; /* Stripe color */
+}
+
+.nozzle-container {
+  /* border: 1px solid white; */
+  position: absolute;
+  top: calc(var(--track-head-height) + 5px);
+  width: var(--racetrack-width);
+  height: calc(100% - 5px - var(--track-head-height));
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes jiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  2% {
+    transform: rotate(8deg);
+  }
+  4% {
+    transform: rotate(-8deg);
+  }
+  6% {
+    transform: rotate(0deg);
+  }
+}
+
+.nozzle {
+  position: absolute;
+  animation: jiggle 5s ease-in-out infinite;
+  transition: all 0.5s ease-in-out;
+}

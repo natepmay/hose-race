@@ -1,0 +1,32 @@
+.full-line {
+  position: absolute;
+  height: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: start;
+}
+
+.line-label {
+  margin-right: 5px;
+  position: relative;
+  top: -0.5rem;
+  height: 1rem;
+  line-height: 1rem;
+  width: 20px;
+  text-align: end;
+}
+
+.line {
+  background-color: #ccc;
+  border: none;
+  height: 2px;
+  width: 100%;
+}
+
+.lines {
+  position: absolute;
+  top: calc(var(--track-head-height) + 5px);
+  width: 100%;
+  height: calc(100% - 5px - var(--track-head-height));
+  border-color: purple;
+}

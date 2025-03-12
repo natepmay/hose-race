@@ -1,0 +1,19 @@
+.header {
+  height: 80px;
+  border: 1px solid;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: rows;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  max-width: var(--maxwidth);
+}

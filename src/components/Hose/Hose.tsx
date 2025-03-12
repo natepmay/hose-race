@@ -1,8 +1,8 @@
-import "../App.css";
-import nozzle1 from "../assets/nozzle1-transp.png";
-import nozzle2 from "../assets/nozzle2-transp.png";
-import nozzle3 from "../assets/nozzle3-transp.png";
-import nozzle4 from "../assets/nozzle4-transp.png";
+import "./Hose.css";
+import nozzle1 from "../../assets/nozzle1-transp.png";
+import nozzle2 from "../../assets/nozzle2-transp.png";
+import nozzle3 from "../../assets/nozzle3-transp.png";
+import nozzle4 from "../../assets/nozzle4-transp.png";
 
 interface Props {
   progress: number;

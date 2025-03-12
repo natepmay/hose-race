@@ -1,0 +1,74 @@
+.post-card {
+  width: 100%;
+  max-width: var(--maxwidth);
+  height: 1rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  text-overflow: clip;
+  font-family: "Courier New", Courier, monospace;
+  overflow-x: hidden;
+}
+
+.post-card-item {
+  overflow-x: hidden;
+  height: 1.5rem;
+}
+
+.parent.light .post-card-item.left::before {
+  background: linear-gradient(to right, white, transparent);
+}
+
+.parent.light .post-card-item.right::after {
+  background: linear-gradient(to right, transparent, white);
+}
+
+/* https://stackoverflow.com/questions/218065/overflow-to-left-instead-of-right */
+.post-card-item.left {
+  text-align: right;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.post-card-item.inner-left {
+  float: right;
+}
+
+/* ChatGPT provided these fades */
+.post-card-item.left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px; /* Adjust width for fade effect */
+  height: 100%;
+  background: linear-gradient(to right, #242424, transparent);
+  pointer-events: none; /* Ensures text remains selectable */
+}
+
+.post-card-item.center {
+  color: green;
+  font-weight: 900;
+  white-space: pre;
+}
+
+.post-card-item.right {
+  text-align: left;
+  position: relative;
+  white-space: pre;
+}
+
+.post-card-item.right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px; /* Adjust width for fade effect */
+  height: 100%;
+  background: linear-gradient(to right, transparent, #242424);
+  pointer-events: none; /* Ensures text remains selectable */
+}

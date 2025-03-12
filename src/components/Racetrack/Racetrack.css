@@ -1,0 +1,37 @@
+.racetrack {
+  width: var(--racetrack-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.track-head {
+  width: 100%;
+  height: var(--track-head-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.trophy-container {
+  position: absolute;
+  top: calc(var(--track-head-height) + 5px);
+  width: var(--racetrack-width);
+  height: calc(100% - 5px - var(--track-head-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid white; */
+}
+
+.post-light {
+  width: var(--racetrack-width);
+  height: 5px;
+  flex-shrink: 0;
+}
+
+.post-light.on {
+  background-color: green;
+}

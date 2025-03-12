@@ -5,12 +5,12 @@ import "./App.css";
 import { AppState, AugmentedLeague, ResultsData } from "./types/types";
 import { getResultsData } from "./utils/getResultsData";
 
-import { Game } from "./components/Game";
-import { Onboard } from "./components/Onboard";
-import { SelectWord } from "./components/SelectWord";
-import { Result } from "./components/Result";
+import { Game } from "./components/Game/Game";
+import { Onboard } from "./components/Onboard/Onboard";
+import { SelectWord } from "./components/SelectWord/SelectWord";
+import { Result } from "./components/Result/Result";
 import { GithubLogo } from "./components/GithubLogo";
-import { Header } from "./components/Header";
+import { Header } from "./components/Header/Header";
 
 function App() {
   const [appState, setAppState] = useState("onboard" as AppState);
