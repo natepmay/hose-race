@@ -290,14 +290,14 @@ body {
   fill: white;
 }
 
-@media (prefers-color-scheme: light) {
-  .post-card-item.left::before {
-    background: linear-gradient(to right, white, transparent);
-  }
-  .post-card-item.right::after {
-    background: linear-gradient(to right, transparent, white);
-  }
-  .logo path {
-    fill: black;
-  }
+.parent.light .post-card-item.left::before {
+  background: linear-gradient(to right, white, transparent);
+}
+
+.parent.light .post-card-item.right::after {
+  background: linear-gradient(to right, transparent, white);
+}
+
+.parent.light .logo path {
+  fill: black;
 }

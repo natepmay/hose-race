@@ -1,4 +1,6 @@
 import { useState } from "react";
+import useLocalStorage from "use-local-storage";
+
 import "./App.css";
 import { AppState, AugmentedLeague, ResultsData } from "./types/types";
 import { getResultsData } from "./utils/getResultsData";
@@ -17,6 +19,10 @@ function App() {
   const [finishers, setFinishers] = useState([] as string[]);
   const [score, setScore] = useState(0);
   const [resultsData, setResultsData] = useState({} as ResultsData);
+  const darkModePreference = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+  const [isDark, setIsDark] = useLocalStorage("isDark", darkModePreference);
 
   if (finishers.includes(chosenWord) && appState === "play") {
     const resultsData = getResultsData(finishers, chosenWord);
@@ -81,8 +87,8 @@ function App() {
   }
 
   return (
-    <div className="parent">
-      <Header score={score} />
+    <div className={`parent ${isDark ? "dark" : "light"}`}>
+      <Header score={score} isDark={isDark} setIsDark={setIsDark} />
       {innerComponent}
       <div className="footer">
         <div className="footer-text">

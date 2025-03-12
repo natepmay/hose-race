@@ -56,15 +56,12 @@ button:disabled {
   cursor: default;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  /* a:hover {
-    color: #747bff; 
-  }*/
-  button {
-    background-color: #f9f9f9;
-  }
+.parent.light {
+  color: #213547;
+  background-color: #ffffff;
+}
+
+.parent.light button {
+  background-color: #f9f9f9;
+  color: #213547;
 }
