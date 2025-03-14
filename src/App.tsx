@@ -11,6 +11,7 @@ import { SelectWord } from "./components/SelectWord/SelectWord";
 import { Result } from "./components/Result/Result";
 import { GithubLogo } from "./components/GithubLogo";
 import { Header } from "./components/Header/Header";
+import { AudioTesting } from "./components/AudioTesting";
 
 function App() {
   const [appState, setAppState] = useState("onboard" as AppState);
@@ -89,6 +90,7 @@ function App() {
   return (
     <div className={`parent ${isDark ? "dark" : "light"}`}>
       <Header score={score} isDark={isDark} setIsDark={setIsDark} />
+      <AudioTesting />
       {innerComponent}
       <div className="footer">
         <div className="footer-text">
