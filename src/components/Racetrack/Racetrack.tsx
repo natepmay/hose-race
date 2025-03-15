@@ -1,4 +1,5 @@
 import "./Racetrack.css";
+
 import { getResultsData } from "../../utils/getResultsData";
 import { Hose } from "../Hose/Hose";
 import { Trophy } from "../Trophy/Trophy";

@@ -38,7 +38,6 @@ export function PostCard({ postText }: { postText: PostText }) {
 
   useEffect(() => {
     if (!postText.text) return;
-    console.log("postText: ", postText);
     const { word, text, url } = postText;
     const index = getIndex(text, word);
     const beforeWord = getBeforeWord(index, text);

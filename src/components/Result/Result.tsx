@@ -1,7 +1,10 @@
+import { useEffect, useContext } from "react";
+
 import { Trophy } from "../Trophy/Trophy";
 import { Button } from "../Button/Button";
 import { Frown } from "lucide-react";
 import { ResultsData } from "../../types/types";
+import { AudioApiContext } from "../../audio/AudioApiContext";
 
 interface Params {
   score: number;
@@ -25,10 +28,16 @@ const PLACE_WORDS: Record<number, Finisher> = {
 };
 
 export function Result({ score, resultsData, onPlayAgain }: Params) {
+  const { stopMusic, playSound } = useContext(AudioApiContext);
   const placeWord =
     resultsData.place in PLACE_WORDS
       ? PLACE_WORDS[resultsData.place as 0 | 1 | 2 | 3]
       : "last";
+
+  useEffect(() => {
+    stopMusic();
+    playSound("roundComplete");
+  }, [stopMusic, playSound]);
 
   return (
     <div>

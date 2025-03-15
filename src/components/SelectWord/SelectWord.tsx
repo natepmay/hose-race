@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useContext } from "react";
 
 import { Button } from "../Button/Button";
+import { AudioApiContext } from "../../audio/AudioApiContext";
 
 import { useLoadLeague } from "../../hooks/useLoadLeague";
 import { AugmentedLeague } from "../../types/types";
@@ -18,6 +20,7 @@ export function SelectWord({
 }) {
   const [chosenWord, setChosenWord] = useState("");
   const league = useLoadLeague();
+  const { playMusic } = useContext(AudioApiContext);
 
   function onOptionChange(e: React.ChangeEvent<HTMLInputElement>) {
     setChosenWord(e.target.value);
@@ -29,6 +32,7 @@ export function SelectWord({
       nextWord: chosenWord,
       nextLeague: league,
     });
+    playMusic();
   }
 
   const wordItems =

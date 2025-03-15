@@ -1,32 +1,20 @@
-import { useEffect, useState } from "react";
+import { useRef, useCallback } from "react";
 
 export function useAudio(url: string, loop: boolean) {
-  const [audio] = useState(new Audio(url));
-  const [playing, setPlaying] = useState(false);
+  const audioRef = useRef(new Audio(url));
+  audioRef.current.loop = loop;
 
-  audio.loop = loop;
+  const togglePlay = useCallback(() => {
+    audioRef.current.play();
+  }, []);
+  const toggleMute = useCallback(
+    () => (audioRef.current.muted = !audioRef.current.muted),
+    []
+  );
+  const stop = useCallback(() => {
+    audioRef.current.pause();
+    audioRef.current.currentTime = 0;
+  }, []);
 
-  const togglePlay = () => setPlaying((prev) => !prev);
-  const toggleMute = () => (audio.muted = !audio.muted);
-  const stop = () => {
-    setPlaying(false);
-    audio.currentTime = 0;
-  };
-
-  useEffect(() => {
-    if (playing) {
-      audio.play();
-    } else {
-      audio.pause();
-    }
-  }, [playing, audio]);
-
-  useEffect(() => {
-    audio.addEventListener("ended", () => setPlaying(false));
-    return () => {
-      audio.removeEventListener("ended", () => setPlaying(false));
-    };
-  }, [audio]);
-
-  return { playing, togglePlay, toggleMute, stop };
+  return { togglePlay, toggleMute, stop };
 }

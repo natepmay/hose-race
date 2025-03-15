@@ -4,6 +4,8 @@ import { Lines } from "../Lines/Lines";
 import { Racetracks } from "../Racetracks/Racetracks";
 import { useFirehose } from "../../hooks/useFirehose";
 import { PostCard } from "../PostCard/PostCard";
+import { useEffect, useContext } from "react";
+import { AudioApiContext } from "../../audio/AudioApiContext";
 
 interface Params {
   league: AugmentedLeague;
@@ -14,7 +16,7 @@ interface Params {
 
 export function Game({ league, onAddFinisher, chosenWord, finishers }: Params) {
   const { postText, wordCount } = useFirehose(league.words);
-
+  const { playSound } = useContext(AudioApiContext);
   // -- FOR DEBUGGING
   // const wordCount = {
   //   one: 0,
@@ -32,6 +34,11 @@ export function Game({ league, onAddFinisher, chosenWord, finishers }: Params) {
   for (const word in wordCount) {
     if (wordCount[word] >= league.finishLine) onAddFinisher(word);
   }
+
+  useEffect(() => {
+    playSound("incoming");
+  }, [playSound, postText]);
+
   return (
     <div className="game">
       <div className="post-card-slot">
