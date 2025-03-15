@@ -4,7 +4,7 @@ export function useAudio(url: string, loop: boolean) {
   const audioRef = useRef(new Audio(url));
   audioRef.current.loop = loop;
 
-  const togglePlay = useCallback(() => {
+  const play = useCallback(() => {
     audioRef.current.play();
   }, []);
   const toggleMute = useCallback(
@@ -16,5 +16,7 @@ export function useAudio(url: string, loop: boolean) {
     audioRef.current.currentTime = 0;
   }, []);
 
-  return { togglePlay, toggleMute, stop };
+  const getIsMuted = () => audioRef.current.muted;
+
+  return { play, toggleMute, stop, getIsMuted };
 }

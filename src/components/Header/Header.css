@@ -17,3 +17,7 @@
   width: 100%;
   max-width: var(--maxwidth);
 }
+
+.mute-button {
+  padding-right: 10px;
+}

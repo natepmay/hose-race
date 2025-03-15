@@ -5,6 +5,7 @@ interface AudioApi {
   stopMusic: () => void;
   playSound: (sound: "incoming" | "roundComplete") => void;
   toggleMute: () => void;
+  getIsMuted: () => boolean;
 }
 
 const defaultAudioApi: AudioApi = {
@@ -12,6 +13,7 @@ const defaultAudioApi: AudioApi = {
   stopMusic: () => {},
   playSound: () => {},
   toggleMute: () => {},
+  getIsMuted: () => false,
 };
 
 export const AudioApiContext: React.Context<AudioApi> =

@@ -12,12 +12,12 @@ export function useAudioTracks() {
     roundComplete: roundCompletePlayer,
   };
 
-  const playMusic = musicPlayer.togglePlay;
+  const playMusic = musicPlayer.play;
 
   const stopMusic = musicPlayer.stop;
 
   const playSound = (sound: "incoming" | "roundComplete") => {
-    sounds[sound].togglePlay();
+    sounds[sound].play();
   };
 
   const toggleMute = () => {
@@ -25,5 +25,7 @@ export function useAudioTracks() {
     Object.values(sounds).forEach((player) => player.toggleMute());
   };
 
-  return { playMusic, stopMusic, playSound, toggleMute };
+  const getIsMuted = musicPlayer.getIsMuted;
+
+  return { playMusic, stopMusic, playSound, toggleMute, getIsMuted };
 }
