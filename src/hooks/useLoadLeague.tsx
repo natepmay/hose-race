@@ -9,7 +9,7 @@ function calculateFinishLine(medianPerSecond: number) {
 }
 
 async function getData(): Promise<League[]> {
-  const response = await fetch("../../data/leagues.json");
+  const response = await fetch("/leagues.json");
   if (!response.ok) {
     throw new Error(`Response status: ${response.status}`);
   }
