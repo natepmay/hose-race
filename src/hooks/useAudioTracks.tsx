@@ -4,8 +4,8 @@ const MUSIC_URL = "/audio/decadent-depraved-mix-20250314.mp3";
 
 export function useAudioTracks() {
   const musicPlayer = useAudio(MUSIC_URL, true);
-  const incomingPlayer = useAudio("/audio/click.mp3", false);
-  const roundCompletePlayer = useAudio("/audio/chime.mp3", false);
+  const incomingPlayer = useAudio("/audio/click-short.mp3", false);
+  const roundCompletePlayer = useAudio("/audio/chime-better.mp3", false);
 
   const sounds = {
     incoming: incomingPlayer,
