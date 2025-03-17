@@ -1,6 +1,6 @@
 import { useAudio } from "./useAudio";
 
-const MUSIC_URL = "/audio/decadent + depraved mix 20250314.mp3";
+const MUSIC_URL = "/audio/decadent-depraved-mix-20250314.mp3";
 
 export function useAudioTracks() {
   const musicPlayer = useAudio(MUSIC_URL, true);
