@@ -1,6 +1,6 @@
 .game {
   width: 100%;
-  height: calc(100vh - 160px);
+  height: calc(100svh - 160px);
   display: flex;
   flex-direction: column;
   justify-content: center;
