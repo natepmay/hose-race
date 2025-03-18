@@ -38,6 +38,7 @@ export function Hose({ progress, finishLine, finished, index }: Props) {
           src={srcs[index]}
           width={nozzleDims[index].width}
           className="nozzle"
+          alt="hose nozzle"
           style={{
             bottom: `calc(100% - ${progressPct}%)`,
             animationDelay: `${Math.random() * 5 + 2}s`,

@@ -40,7 +40,7 @@ export function Game({ league, onAddFinisher, chosenWord, finishers }: Params) {
   }, [playSound, postText]);
 
   return (
-    <div className="game">
+    <main className="game">
       <div className="post-card-slot">
         <PostCard postText={postText} />
       </div>
@@ -60,6 +60,6 @@ export function Game({ league, onAddFinisher, chosenWord, finishers }: Params) {
           ></Racetracks>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

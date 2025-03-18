@@ -51,7 +51,7 @@ export function SelectWord({
     ));
 
   return (
-    <div className="select-word" style={{ textAlign: "center" }}>
+    <main className="select-word" style={{ textAlign: "center" }}>
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>
@@ -68,6 +68,6 @@ export function SelectWord({
           </div>
         </fieldset>
       </form>
-    </div>
+    </main>
   );
 }

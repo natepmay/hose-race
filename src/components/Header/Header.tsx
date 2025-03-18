@@ -17,7 +17,7 @@ export function Header({
   const [muted, setMuted] = useState(false);
 
   return (
-    <div className="header">
+    <header className="header">
       <div className="header-text">
         <div style={{ flex: 1 }}>Hose Race</div>
         <div style={{ flex: 1, textAlign: "center" }}>{score}</div>
@@ -45,6 +45,6 @@ export function Header({
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 }

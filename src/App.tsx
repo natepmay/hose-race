@@ -92,14 +92,14 @@ function App() {
       <AudioProvider>
         <Header score={score} isDark={isDark} setIsDark={setIsDark} />
         {innerComponent}
-        <div className="footer">
+        <footer className="footer">
           <div className="footer-text">
             <div>by Nate May</div>
             <div>
               <GithubLogo />
             </div>
           </div>
-        </div>
+        </footer>
       </AudioProvider>
     </div>
   );

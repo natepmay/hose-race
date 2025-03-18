@@ -40,7 +40,7 @@ export function Result({ score, resultsData, onPlayAgain }: Params) {
   }, [stopMusic, playSound]);
 
   return (
-    <div>
+    <main>
       {isPlacer(placeWord) ? (
         <Trophy place={placeWord} size="68" />
       ) : (
@@ -59,6 +59,6 @@ export function Result({ score, resultsData, onPlayAgain }: Params) {
         readOnly
       />
       <Button onClick={() => onPlayAgain()}>Play Again</Button>
-    </div>
+    </main>
   );
 }
