@@ -33,6 +33,11 @@ a {
   color: #646cff;
   text-decoration: inherit; */
 }
+
+a:focus {
+  outline: auto 5px Highlight; /* for non-webkit browsers */
+  outline: auto 5px -webkit-focus-ring-color; /* for webkit browsers */
+}
 /*
 a:hover {
   color: #535bf2;
@@ -41,6 +46,10 @@ a:hover {
 button {
   all: unset;
   cursor: pointer;
+}
+button:focus {
+  outline: auto 5px Highlight; /* for non-webkit browsers */
+  outline: auto 5px -webkit-focus-ring-color; /* for webkit browsers */
 }
 
 h1 {

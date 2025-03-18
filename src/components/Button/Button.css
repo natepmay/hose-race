@@ -14,7 +14,8 @@
 }
 .button:focus,
 .button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: auto 5px Highlight; /* for non-webkit browsers */
+  outline: auto 5px -webkit-focus-ring-color; /* for webkit browsers */
 }
 .button:disabled {
   cursor: default;
