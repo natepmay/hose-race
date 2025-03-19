@@ -19,8 +19,12 @@ export function Header({
   return (
     <header className="header">
       <div className="header-text">
-        <div style={{ flex: 1 }}>Hose Race</div>
-        <div style={{ flex: 1, textAlign: "center" }}>{score}</div>
+        <div style={{ flex: 1 }} className="logo">
+          Hose Race
+        </div>
+        <div style={{ flex: 1, textAlign: "center" }} aria-label="score">
+          <strong>{score}</strong>
+        </div>
         <div
           style={{ flex: 1, textAlign: "right" }}
           className="toggle-container"

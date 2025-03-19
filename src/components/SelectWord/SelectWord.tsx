@@ -38,7 +38,7 @@ export function SelectWord({
   const wordItems =
     "words" in league &&
     league.words.map((word) => (
-      <div key={word}>
+      <div key={word} style={{ marginBottom: "10px" }}>
         <input
           type="radio"
           id={word}

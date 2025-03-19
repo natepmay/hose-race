@@ -102,7 +102,12 @@ function App() {
         {innerComponent}
         <footer className="footer">
           <div className="footer-text">
-            <div>by Nate May</div>
+            <div>
+              by{" "}
+              <a href="https://bsky.app/profile/did:plc:5vmkw5e5if7sespehv5sp7tl">
+                Nate May
+              </a>
+            </div>
             <div>
               <GithubLogo />
             </div>

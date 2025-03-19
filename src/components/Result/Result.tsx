@@ -1,3 +1,4 @@
+import "./Result.css";
 import { useEffect, useContext } from "react";
 
 import { Trophy } from "../Trophy/Trophy";
@@ -40,7 +41,7 @@ export function Result({ score, resultsData, onPlayAgain }: Params) {
   }, [stopMusic, playSound]);
 
   return (
-    <main>
+    <main className="result">
       {isPlacer(placeWord) ? (
         <Trophy place={placeWord} size="68" />
       ) : (
@@ -49,15 +50,17 @@ export function Result({ score, resultsData, onPlayAgain }: Params) {
       <h2>
         You finished in <strong>{placeWord} place</strong>.
       </h2>
-      <h3>You've earned {resultsData.newPoints} points.</h3>
-      <h3>Your new score is {score}.</h3>
-      <h3>Share your accomplishment! </h3>
-      <textarea
-        cols={50}
-        defaultValue={`I earned ${score} meaningless points by racing words on the Bluesky firehose.`}
-        style={{ display: "block", resize: "none" }}
-        readOnly
-      />
+      <p>
+        You've earned <strong>{resultsData.newPoints}</strong> points.
+      </p>
+      <p>
+        Your new score is <strong>{score}</strong>.
+      </p>
+      <p>
+        Share your accomplishment by pasting the following into the app of your
+        choice.{" "}
+      </p>
+      <p className="texty">{`💧I just earned ${score} meaningless points in Hose Race by racing words on the Bluesky firehose. https://hose-race.natemay.dev💧`}</p>
       <Button onClick={() => onPlayAgain()}>Play Again</Button>
     </main>
   );
