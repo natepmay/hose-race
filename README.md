@@ -2,7 +2,7 @@
 
 Guess which words will appear the most on English-language Bluesky in realtime.
 
-This was a small project for me to get comfortable with React and play with the Bluesky firehose.
+This was a learning project for me to get comfortable with React and play with the Bluesky firehose.
 
 ## Stack
 
