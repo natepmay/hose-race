@@ -51,7 +51,11 @@ export function SelectWord({
     ));
 
   return (
-    <main className="select-word" style={{ textAlign: "center" }}>
+    <main
+      className="select-word"
+      style={{ textAlign: "center" }}
+      aria-live="polite"
+    >
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>

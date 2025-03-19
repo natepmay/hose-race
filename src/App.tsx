@@ -56,16 +56,19 @@ function App() {
   }
 
   let innerComponent;
+  let ariaText;
   switch (appState) {
     case "onboard":
       innerComponent = (
         <Onboard onBegin={() => setAppState("select")}></Onboard>
       );
+      ariaText = "Welcome to Hose Race.";
       break;
     case "select":
       innerComponent = (
         <SelectWord onSubmitWord={handleSubmitWord}></SelectWord>
       );
+      ariaText = "Pick your word.";
       break;
     case "play":
       innerComponent = (
@@ -76,6 +79,7 @@ function App() {
           finishers={finishers}
         ></Game>
       );
+      ariaText = "The race has begun!";
       break;
     case "result":
       innerComponent = (
@@ -85,10 +89,14 @@ function App() {
           onPlayAgain={handlePlayAgain}
         ></Result>
       );
+      ariaText = `You finished in ${resultsData.placeWord} place. You now have ${score} points.`;
   }
 
   return (
     <div className={`parent ${isDark ? "dark" : "light"}`}>
+      <div className="visually-hidden" aria-live="polite" role="presentation">
+        {ariaText}
+      </div>
       <AudioProvider>
         <Header score={score} isDark={isDark} setIsDark={setIsDark} />
         {innerComponent}
