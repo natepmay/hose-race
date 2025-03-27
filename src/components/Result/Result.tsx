@@ -40,6 +40,8 @@ export function Result({ score, resultsData, onPlayAgain }: Params) {
     playSound("roundComplete");
   }, [stopMusic, playSound]);
 
+  const shareText = `💧I just earned ${score} meaningless points in Hose Race by racing words on the Bluesky firehose. https://hose-race.natemay.dev 💧`;
+
   return (
     <main className="result">
       {isPlacer(placeWord) ? (
@@ -57,10 +59,16 @@ export function Result({ score, resultsData, onPlayAgain }: Params) {
         Your new score is <strong>{score}</strong>.
       </p>
       <p>
-        Share your accomplishment by pasting the following into the app of your
-        choice.{" "}
+        <a
+          href={`https://bsky.app/intent/compose?text=${shareText}`}
+          style={{ textDecoration: "underline" }}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Share your accomplishment on Bluesky by clicking here.
+        </a>
       </p>
-      <p className="texty">{`💧I just earned ${score} meaningless points in Hose Race by racing words on the Bluesky firehose. https://hose-race.natemay.dev💧`}</p>
+      <p className="texty">{shareText}</p>
       <Button onClick={() => onPlayAgain()}>Play Again</Button>
     </main>
   );
