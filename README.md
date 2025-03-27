@@ -11,6 +11,10 @@ This was a learning project for me to get comfortable with React and play with t
 - Vite
 - Deno (for `data` folder only)
 
+## Status
+
+This was a learning project for me and I'm not actively maintaining it.
+
 ## Data
 
 In order to make the game fun I needed to match up sets of words ("leagues") that appear at roughly the same rate of occurence on Bluesky. For this I periodically took "sips" from the firehose and analyzed the top words used. I then aggregated this data, manually eliminated some words, and grouped words by their median occurrences across all of the sips. The result is in `data/leagues.json`. I've also copied this file into the `public` folder so the app can access it in the frontend.
