@@ -1,6 +1,10 @@
 .result {
-  padding: 10px;
+  padding: 20px;
   overflow-y: scroll;
+  width: 100%;
+  max-width: var(--maxwidth);
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .texty {
