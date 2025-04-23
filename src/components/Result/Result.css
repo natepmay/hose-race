@@ -1,6 +1,5 @@
 .result {
   padding: 20px;
-  overflow-y: scroll;
   width: 100%;
   max-width: var(--maxwidth);
   overflow-x: hidden;

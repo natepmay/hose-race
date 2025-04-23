@@ -10,11 +10,11 @@
   padding-bottom: 10px;
   text-overflow: clip;
   font-family: "Courier New", Courier, monospace;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .post-card-item {
-  overflow-x: hidden;
+  overflow: hidden;
   height: 1.5rem;
 }
 
